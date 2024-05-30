@@ -886,5 +886,43 @@
   id: 116
   time: '2024-05-19T03:58:47.0000000+00:00'
   url: https://github.com/CM-14/CM-14/pull/2157
+- author: DrSmugleaf
+  changes:
+  - message: Added xeno death sounds and xeno pull knockdown sound.
+    type: Add
+  id: 117
+  time: '2024-05-20T02:18:15.0000000+00:00'
+  url: https://github.com/CM-14/CM-14/pull/2160
+- author: DrSmugleaf
+  changes:
+  - message: Ported the effects of all existing medicines.
+    type: Add
+  - message: Added all times to the Wey-Med Plus except for painkillers, splints and
+      peridaxon.
+    type: Add
+  id: 118
+  time: '2024-05-22T00:40:24.0000000+00:00'
+  url: https://github.com/CM-14/CM-14/pull/2163
+- author: DrSmugleaf
+  changes:
+  - message: Added all cm chemicals to the guidebook.
+    type: Add
+  id: 119
+  time: '2024-05-23T12:08:54.0000000+00:00'
+  url: https://github.com/CM-14/CM-14/pull/2168
+- author: DrSmugleaf
+  changes:
+  - message: Added quick holster and unholster keys.
+    type: Add
+  id: 120
+  time: '2024-05-23T13:03:56.0000000+00:00'
+  url: https://github.com/CM-14/CM-14/pull/2166
+- author: Tunguso4ka
+  changes:
+  - message: Ported stanbaton, flash and handcuffs from CM13
+    type: Add
+  id: 121
+  time: '2024-05-28T12:36:23.0000000+00:00'
+  url: https://github.com/CM-14/CM-14/pull/2170
 Name: CM
 Order: -1

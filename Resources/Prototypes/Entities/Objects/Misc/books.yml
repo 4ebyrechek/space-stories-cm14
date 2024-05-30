@@ -361,8 +361,8 @@
   components:
   - type: RandomMetadata
     nameSegments:
-    - book_hint_appearance
-    - book_type
+    - BookHintAppearances
+    - BookTypes
   - type: RandomSprite
     available:
       - cover:
@@ -423,6 +423,7 @@
   suffix: random visual, random story
   components:
   - type: PaperRandomStory
+    template: GenericStory
     storySegments:
     - "Это "
     - book_genre

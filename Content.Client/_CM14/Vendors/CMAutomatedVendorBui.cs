@@ -1,7 +1,11 @@
-﻿using Content.Shared._CM14.Vendors;
+﻿using System.Linq;
+using Content.Shared._CM14.Medical.Refill;
+using Content.Shared._CM14.Vendors;
 using JetBrains.Annotations;
 using Robust.Client.GameObjects;
+using Robust.Client.Graphics;
 using Robust.Client.Player;
+using Robust.Client.ResourceManagement;
 using Robust.Client.UserInterface.CustomControls;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Utility;
@@ -15,14 +19,12 @@ public sealed class CMAutomatedVendorBui : BoundUserInterface
 {
     [Dependency] private readonly IPlayerManager _player = default!;
     [Dependency] private readonly IPrototypeManager _prototype = default!;
-
-    private readonly SpriteSystem _sprite;
+    [Dependency] private readonly IResourceCache _resource = default!;
 
     private CMAutomatedVendorWindow? _window;
 
     public CMAutomatedVendorBui(EntityUid owner, Enum uiKey) : base(owner, uiKey)
     {
-        _sprite = EntMan.System<SpriteSystem>();
     }
 
     protected override void Open()
@@ -30,6 +32,7 @@ public sealed class CMAutomatedVendorBui : BoundUserInterface
         _window = new CMAutomatedVendorWindow();
         _window.OnClose += Close;
         _window.Title = EntMan.GetComponentOrNull<MetaDataComponent>(Owner)?.EntityName ?? "ColMarTech Vendor";
+        _window.ReagentsBar.ForegroundStyleBoxOverride = new StyleBoxFlat(Color.FromHex("#AF7F38"));
 
         var user = EntMan.GetComponentOrNull<CMVendorUserComponent>(_player.LocalEntity);
         if (EntMan.TryGetComponent(Owner, out CMAutomatedVendorComponent? vendor))
@@ -47,7 +50,9 @@ public sealed class CMAutomatedVendorBui : BoundUserInterface
 
                     if (_prototype.TryIndex(entry.Id, out var entity))
                     {
-                        uiEntry.Texture.Texture = _sprite.Frame0(entity);
+                        uiEntry.Texture.Textures = SpriteComponent.GetPrototypeTextures(entity, _resource)
+                            .Select(o => o.Default)
+                            .ToList();
                         uiEntry.Panel.Button.Label.Text = entry.Name ?? entity.Name;
 
                         var msg = new FormattedMessage();
@@ -123,6 +128,9 @@ public sealed class CMAutomatedVendorBui : BoundUserInterface
 
         var anyEntryWithPoints = false;
         var user = EntMan.GetComponentOrNull<CMVendorUserComponent>(_player.LocalEntity);
+        var userPoints = vendor.PointsType == null
+            ? user?.Points ?? 0
+            : user?.ExtraPoints?.GetValueOrDefault(vendor.PointsType) ?? 0;
         for (var sectionIndex = 0; sectionIndex < vendor.Sections.Count; sectionIndex++)
         {
             var section = vendor.Sections[sectionIndex];
@@ -155,7 +163,8 @@ public sealed class CMAutomatedVendorBui : BoundUserInterface
                 {
                     anyEntryWithPoints = true;
                     uiEntry.Amount.Text = $"{entry.Points}P";
-                    if (user == null || user.Points < entry.Points)
+
+                    if (user == null || userPoints < entry.Points)
                     {
                         disabled = true;
                     }
@@ -170,7 +179,22 @@ public sealed class CMAutomatedVendorBui : BoundUserInterface
             }
         }
 
-        _window.PointsLabel.Text = anyEntryWithPoints ? $"Points Remaining: {user?.Points ?? 0}" : string.Empty;
+        _window.PointsLabel.Text = anyEntryWithPoints ? $"Points Remaining: {userPoints}" : string.Empty;
+
+        if (!EntMan.TryGetComponent(Owner, out CMSolutionRefillerComponent? refiller))
+        {
+            _window.ReagentsContainer.Visible = false;
+            return;
+        }
+
+        _window.ReagentsContainer.Visible = true;
+
+        var current = refiller.Current;
+        var max = refiller.Max;
+        _window.ReagentsBar.MinValue = 0;
+        _window.ReagentsBar.MaxValue = max.Int();
+        _window.ReagentsBar.SetAsRatio((refiller.Current / refiller.Max).Float());
+        _window.ReagentsLabel.Text = $"{current.Int()} units";
     }
 
     protected override void Dispose(bool disposing)
