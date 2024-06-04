@@ -12,13 +12,6 @@ auto_call_time = 0
 emergency = false
 preload_grids = false
 
-# [game.panic_bunker]
-# enabled               = false
-# disable_with_admins   = true
-# enable_without_admins = true
-# show_reason           = true
-# custom_reason         = "Сервер находиться в режиме бункера.\nВы не играли на сервере Space Stories Colonial Marines достаточно долго, чтобы подключиться к этому серверу."
-
 # [infolinks]
 # bug_report = "" Ссылка на дискорд
 # discord    = "" Ссылка на дискорд
@@ -44,6 +37,14 @@ limit = 10.0
 
 [admin]
 new_player_threshold = 600
+
+[autovote]
+enabled = true
+
+[atmos]
+space_wind = false
+monstermos_rip_tiles = false
+grid_impulse = false
 
 # [server]
 # rules_file = "CM_Rules.txt"

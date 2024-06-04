@@ -339,9 +339,15 @@ namespace Content.Server.GameTicking
             ShowRoundEndScoreboard(text);
             SendRoundEndDiscordMessage();
 
-            _gameMapManager.ClearSelectedMap(); // Stories-AutoVote
-            _vote.CreateStandardVote(null, StandardVoteType.Map); // Stories-AutoVote
-            _vote.CreateStandardVote(null, StandardVoteType.Preset); // Stories-AutoVote
+            // Stories-AutoVote-Start
+            _gameMapManager.ClearSelectedMap();
+            var autoVote = _cfg.GetCVar(SCCVars.AutoVoteEnabled);
+            if (autoVote)
+            {
+                _vote.CreateStandardVote(null, StandardVoteType.Map);
+                _vote.CreateStandardVote(null, StandardVoteType.Preset);
+            }
+            // Stories-AutoVote-End
         }
 
         public void ShowRoundEndScoreboard(string text = "")
