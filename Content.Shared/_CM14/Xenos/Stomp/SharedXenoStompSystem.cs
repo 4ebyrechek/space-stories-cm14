@@ -1,18 +1,14 @@
-﻿using System.Numerics;
-using Content.Shared._CM14.Marines;
+﻿using Content.Shared._CM14.Marines;
 using Content.Shared._CM14.Xenos.Plasma;
 using Content.Shared.Coordinates;
 using Content.Shared.Damage;
 using Content.Shared.Effects;
 using Content.Shared.FixedPoint;
-using Content.Shared.Actions;
 using Content.Shared.Mobs.Systems;
 using Content.Shared.Stunnable;
-using Content.Shared.Standing;
 using Robust.Shared.Audio.Systems;
 using Robust.Shared.Network;
 using Robust.Shared.Player;
-using Robust.Shared.Timing;
 
 namespace Content.Shared._CM14.Xenos.Stomp;
 
@@ -26,7 +22,6 @@ public sealed class XenoStompSystem : EntitySystem
     [Dependency] private readonly EntityLookupSystem _entityLookup = default!;
     [Dependency] private readonly SharedStunSystem _stun = default!;
     [Dependency] private readonly SharedAudioSystem _audio = default!;
-    [Dependency] private readonly SharedTransformSystem _transform = default!;
 
     public override void Initialize()
     {
@@ -54,12 +49,13 @@ public sealed class XenoStompSystem : EntitySystem
         }
 
         if (!_xenoPlasma.TryRemovePlasmaPopup(xeno.Owner, xeno.Comp.PlasmaCost))
-        {
             return;
-        }
 
         _receivers.Clear();
         _entityLookup.GetEntitiesInRange(xform.Coordinates, xeno.Comp.ParalyzeRange, _receivers);
+
+        if (_net.IsServer)
+            _audio.PlayPvs(xeno.Comp.Sound, xeno);
 
         foreach (var receiver in _receivers)
         {
@@ -67,7 +63,8 @@ public sealed class XenoStompSystem : EntitySystem
                 continue;
 
             _stun.TryParalyze(receiver, xeno.Comp.ParalyzeTime, true);
-            SpawnAttachedTo(xeno.Comp.Effect, receiver.Owner.ToCoordinates());
+            if (_net.IsServer)
+                SpawnAttachedTo(xeno.Comp.Effect, receiver.Owner.ToCoordinates());
         }
 
         _receivers.Clear();
@@ -86,10 +83,7 @@ public sealed class XenoStompSystem : EntitySystem
             }
         }
 
-        if (_net.IsClient)
-            return;
-
-        _audio.PlayPvs(xeno.Comp.Sound, xeno);
-        SpawnAttachedTo(xeno.Comp.SelfEffect, xeno.Owner.ToCoordinates());
+        if (_net.IsServer)
+            SpawnAttachedTo(xeno.Comp.SelfEffect, xeno.Owner.ToCoordinates());
     }
 }
