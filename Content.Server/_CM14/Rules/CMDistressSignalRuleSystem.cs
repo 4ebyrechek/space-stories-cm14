@@ -116,25 +116,25 @@ public sealed class CMDistressSignalRuleSystem : GameRuleSystem<CMDistressSignal
                 continue;
 
             comp.Hive = Spawn(comp.HiveId);
-            if (!SpawnXenoMap((uid, comp)))
-            {
-                Log.Error("Failed to load xeno map");
-                continue;
-            }
+            // if (!SpawnXenoMap((uid, comp)))
+            // {
+            //     Log.Error("Failed to load xeno map");
+            //     continue;
+            // }
 
-            var xenoSpawnPoints = new List<EntityUid>();
-            var spawnQuery = AllEntityQuery<XenoSpawnPointComponent>();
-            while (spawnQuery.MoveNext(out var spawnUid, out _))
-            {
-                xenoSpawnPoints.Add(spawnUid);
-            }
+            // var xenoSpawnPoints = new List<EntityUid>();
+            // var spawnQuery = AllEntityQuery<XenoSpawnPointComponent>();
+            // while (spawnQuery.MoveNext(out var spawnUid, out _))
+            // {
+            //     xenoSpawnPoints.Add(spawnUid);
+            // }
 
-            var xenoLeaderSpawnPoints = new List<EntityUid>();
-            var leaderSpawnQuery = AllEntityQuery<XenoLeaderSpawnPointComponent>();
-            while (leaderSpawnQuery.MoveNext(out var spawnUid, out _))
-            {
-                xenoLeaderSpawnPoints.Add(spawnUid);
-            }
+            // var xenoLeaderSpawnPoints = new List<EntityUid>();
+            // var leaderSpawnQuery = AllEntityQuery<XenoLeaderSpawnPointComponent>();
+            // while (leaderSpawnQuery.MoveNext(out var spawnUid, out _))
+            // {
+            //     xenoLeaderSpawnPoints.Add(spawnUid);
+            // }
 
             bool IsAllowed(NetUserId id, ProtoId<JobPrototype> role)
             {
@@ -151,110 +151,110 @@ public sealed class CMDistressSignalRuleSystem : GameRuleSystem<CMDistressSignal
                 return true;
             }
 
-            NetUserId? SpawnXeno(List<NetUserId> list, EntProtoId ent)
-            {
-                var playerId = _random.PickAndTake(list);
-                if (!_player.TryGetSessionById(playerId, out var player))
-                {
-                    Log.Error($"Failed to find player with id {playerId} during xeno selection.");
-                    return null;
-                }
+            // NetUserId? SpawnXeno(List<NetUserId> list, EntProtoId ent)
+            // {
+            //     var playerId = _random.PickAndTake(list);
+            //     if (!_player.TryGetSessionById(playerId, out var player))
+            //     {
+            //         Log.Error($"Failed to find player with id {playerId} during xeno selection.");
+            //         return null;
+            //     }
 
-                ev.PlayerPool.Remove(player);
-                GameTicker.PlayerJoinGame(player);
+            //     ev.PlayerPool.Remove(player);
+            //     GameTicker.PlayerJoinGame(player);
 
-                var leader = _prototypes.TryIndex(ent, out var proto) &&
-                             proto.TryGetComponent(out XenoComponent? xeno, _compFactory) &&
-                             xeno.SpawnAtLeaderPoint;
+            //     var leader = _prototypes.TryIndex(ent, out var proto) &&
+            //                  proto.TryGetComponent(out XenoComponent? xeno, _compFactory) &&
+            //                  xeno.SpawnAtLeaderPoint;
 
-                var point = _random.Pick(leader ? xenoLeaderSpawnPoints : xenoSpawnPoints);
-                var xenoEnt = SpawnAtPosition(ent, point.ToCoordinates());
+            //     var point = _random.Pick(leader ? xenoLeaderSpawnPoints : xenoSpawnPoints);
+            //     var xenoEnt = SpawnAtPosition(ent, point.ToCoordinates());
 
-                _xeno.MakeXeno(xenoEnt);
-                _xeno.SetHive(xenoEnt, comp.Hive);
+            //     _xeno.MakeXeno(xenoEnt);
+            //     _xeno.SetHive(xenoEnt, comp.Hive);
 
-                if (!_mind.TryGetMind(playerId, out var mind))
-                    mind = _mind.CreateMind(playerId);
+            //     if (!_mind.TryGetMind(playerId, out var mind))
+            //         mind = _mind.CreateMind(playerId);
 
-                _mind.TransferTo(mind.Value, xenoEnt);
-                return playerId;
-            }
+            //     _mind.TransferTo(mind.Value, xenoEnt);
+            //     return playerId;
+            // }
 
-            var totalXenos = Math.Max(1, ev.PlayerPool.Count / comp.PlayersPerXeno);
-            var xenoCandidates = new List<NetUserId>[Enum.GetValues<JobPriority>().Length];
-            for (var i = 0; i < xenoCandidates.Length; i++)
-            {
-                xenoCandidates[i] = [];
-            }
+            // var totalXenos = Math.Max(1, ev.PlayerPool.Count / comp.PlayersPerXeno);
+            // var xenoCandidates = new List<NetUserId>[Enum.GetValues<JobPriority>().Length];
+            // for (var i = 0; i < xenoCandidates.Length; i++)
+            // {
+            //     xenoCandidates[i] = [];
+            // }
 
-            foreach (var (id, profile) in ev.Profiles)
-            {
-                if (!IsAllowed(id, comp.QueenJob))
-                    continue;
+            // foreach (var (id, profile) in ev.Profiles)
+            // {
+            //     if (!IsAllowed(id, comp.QueenJob))
+            //         continue;
 
-                if (profile.JobPriorities.TryGetValue(comp.QueenJob, out var priority) &&
-                    priority > JobPriority.Never)
-                {
-                    xenoCandidates[(int) priority].Add(id);
-                }
-            }
+            //     if (profile.JobPriorities.TryGetValue(comp.QueenJob, out var priority) &&
+            //         priority > JobPriority.Never)
+            //     {
+            //         xenoCandidates[(int) priority].Add(id);
+            //     }
+            // }
 
-            NetUserId? queenSelected = null;
-            for (var i = xenoCandidates.Length - 1; i >= 0; i--)
-            {
-                var list = xenoCandidates[i];
-                while (list.Count > 0)
-                {
-                    queenSelected = SpawnXeno(list, comp.QueenEnt);
-                    if (queenSelected != null)
-                        break;
-                }
+            // NetUserId? queenSelected = null;
+            // for (var i = xenoCandidates.Length - 1; i >= 0; i--)
+            // {
+            //     var list = xenoCandidates[i];
+            //     while (list.Count > 0)
+            //     {
+            //         queenSelected = SpawnXeno(list, comp.QueenEnt);
+            //         if (queenSelected != null)
+            //             break;
+            //     }
 
-                if (queenSelected != null)
-                {
-                    totalXenos--;
-                    break;
-                }
-            }
+            //     if (queenSelected != null)
+            //     {
+            //         totalXenos--;
+            //         break;
+            //     }
+            // }
 
-            foreach (var list in xenoCandidates)
-            {
-                list.Clear();
-            }
+            // foreach (var list in xenoCandidates)
+            // {
+            //     list.Clear();
+            // }
 
-            foreach (var (id, profile) in ev.Profiles)
-            {
-                if (id == queenSelected)
-                    continue;
+            // foreach (var (id, profile) in ev.Profiles)
+            // {
+            //     if (id == queenSelected)
+            //         continue;
 
-                if (!IsAllowed(id, comp.XenoSelectableJob))
-                    continue;
+            //     if (!IsAllowed(id, comp.XenoSelectableJob))
+            //         continue;
 
-                if (profile.JobPriorities.TryGetValue(comp.XenoSelectableJob, out var priority) &&
-                    priority > JobPriority.Never)
-                {
-                    xenoCandidates[(int) priority].Add(id);
-                }
-            }
+            //     if (profile.JobPriorities.TryGetValue(comp.XenoSelectableJob, out var priority) &&
+            //         priority > JobPriority.Never)
+            //     {
+            //         xenoCandidates[(int) priority].Add(id);
+            //     }
+            // }
 
-            var selected = 0;
-            for (var i = xenoCandidates.Length - 1; i >= 0; i--)
-            {
-                var list = xenoCandidates[i];
-                while (list.Count > 0 && selected < totalXenos)
-                {
-                    if (SpawnXeno(list, comp.LarvaEnt) != null)
-                        selected++;
-                }
-            }
+            // var selected = 0;
+            // for (var i = xenoCandidates.Length - 1; i >= 0; i--)
+            // {
+            //     var list = xenoCandidates[i];
+            //     while (list.Count > 0 && selected < totalXenos)
+            //     {
+            //         if (SpawnXeno(list, comp.LarvaEnt) != null)
+            //             selected++;
+            //     }
+            // }
 
-            for (var i = selected; i < totalXenos; i++)
-            {
-                // TODO CM14 xeno spawn points
-                var xenoEnt = Spawn(comp.LarvaEnt, comp.XenoMap.ToCoordinates());
-                _xeno.MakeXeno(xenoEnt);
-                _xeno.SetHive(xenoEnt, comp.Hive);
-            }
+            // for (var i = selected; i < totalXenos; i++)
+            // {
+            //     // TODO CM14 xeno spawn points
+            //     var xenoEnt = Spawn(comp.LarvaEnt, comp.XenoMap.ToCoordinates());
+            //     _xeno.MakeXeno(xenoEnt);
+            //     _xeno.SetHive(xenoEnt, comp.Hive);
+            // }
 
             if (spawnedDropships)
                 return;
@@ -550,24 +550,24 @@ public sealed class CMDistressSignalRuleSystem : GameRuleSystem<CMDistressSignal
         }
     }
 
-    private bool SpawnXenoMap(Entity<CMDistressSignalRuleComponent> rule)
-    {
-        // TODO CM14 different planet-side maps
-        var mapId = _mapManager.CreateMap();
-        if (!_mapLoader.TryLoad(mapId, "/Maps/_CM14/lv624.yml", out var grids) ||
-            grids.Count == 0)
-        {
-            return false;
-        }
+    // private bool SpawnXenoMap(Entity<CMDistressSignalRuleComponent> rule)
+    // {
+    //     // TODO CM14 different planet-side maps
+    //     var mapId = _mapManager.CreateMap();
+    //     if (!_mapLoader.TryLoad(mapId, "/Maps/_CM14/lv624.yml", out var grids) ||
+    //         grids.Count == 0)
+    //     {
+    //         return false;
+    //     }
 
-        if (grids.Count > 1)
-            Log.Error("Multiple planet-side grids found");
+    //     if (grids.Count > 1)
+    //         Log.Error("Multiple planet-side grids found");
 
-        rule.Comp.XenoMap = grids[0];
+    //     rule.Comp.XenoMap = grids[0];
 
-        _mapManager.SetMapPaused(mapId, false);
-        return true;
-    }
+    //     _mapManager.SetMapPaused(mapId, false);
+    //     return true;
+    // }
 
     private Spawners GetSpawners()
     {
