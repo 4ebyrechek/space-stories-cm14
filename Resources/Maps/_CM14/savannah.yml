@@ -18599,7 +18599,7 @@ entities:
   - uid: 3598
     components:
     - type: MetaData
-      name: PORT 1
+      name: СТЫКОВОЧНЫЙ ПОРТ 1
     - type: Transform
       pos: 14.5,-7.5
       parent: 1
@@ -18608,7 +18608,7 @@ entities:
   - uid: 3599
     components:
     - type: MetaData
-      name: PORT 2
+      name: СТЫКОВОЧНЫЙ ПОРТ 2
     - type: Transform
       pos: -9.5,-7.5
       parent: 1
