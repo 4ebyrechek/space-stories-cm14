@@ -4,8 +4,8 @@
   description: cm-department-AuxiliarySupport-description
   color: "#C38312"
   roles:
-  - CMAuxiliarySupportOfficer
+  # - CMAuxiliarySupportOfficer
   - CMPilotDropship
   - CMPilotGunship
-  - CMDropshipCrewChief
-  - CMIntelOfficer
+  # - CMDropshipCrewChief
+  # - CMIntelOfficer

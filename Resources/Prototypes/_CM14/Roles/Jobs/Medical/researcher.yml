@@ -23,7 +23,6 @@
       medical: 3
       research: 1
       surgery: 2
-  hidden: true # TODO CM14
 
 - type: startingGear
   id: CMGearResearcher
