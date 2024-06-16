@@ -21,11 +21,11 @@
             CMMilitaryWarden: [1, 1]
             CMMilitaryPolice: [4, 4]
             #Auxiliary
-            CMAuxiliarySupportOfficer: [1, 1]
-            CMIntelOfficer: [4, 4]
+            # CMAuxiliarySupportOfficer: [1, 1]
+            # CMIntelOfficer: [4, 4]
             CMPilotDropship: [1, 1]
             CMPilotGunship: [1, 1]
-            CMDropshipCrewChief: [2, 2]
+            # CMDropshipCrewChief: [2, 2]
             #Engineering
             CMChiefEngineer: [1, 1]
             CMOrdnanceTech: [3, 3]
@@ -34,15 +34,15 @@
             CMCMO: [1, 1]
             CMDoctor: [4, 4]
             CMNurse: [2, 2]
-            CMResearcher: [2, 2]
+            # CMResearcher: [2, 2]
             #Requisition
             CMQuartermaster: [1, 1]
             CMCargoTech: [4, 4]
             CMMessTech: [1, 1]
             #Marines
             CMSquadLeader: [4, 4]
-            CMFireteamLeader: [8, 16]
-            CMSmartgunner: [8, 16]
+            # CMFireteamLeader: [8, 16]
+            # CMSmartgunner: [8, 16]
             CMWeaponsSpecialist: [8, 16]
             CMCombatTech: [16, 16]
             CMHospitalCorpsman: [8, 16]
