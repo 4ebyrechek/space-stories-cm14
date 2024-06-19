@@ -6,7 +6,7 @@
   keycode: "х" #z in cm13
   frequency: 1471
   color: "#318779"
-  longRange: true
+  longRange: false
 
 # Almayer channels
 - type: radioChannel
@@ -15,7 +15,7 @@
   keycode: "г" #; and g in cm13
   frequency: 1480
   color: "#a0a0a0"
-  longRange: true
+  longRange: false
 
 - type: radioChannel
   id: MarineCommand
@@ -23,7 +23,7 @@
   keycode: "в" #v in cm13
   frequency: 1481
   color: "#5b96d4"
-  longRange: true
+  longRange: false
 
 - type: radioChannel
   id: MarineMedical
@@ -31,7 +31,7 @@
   keycode: "м" #m in cm13
   frequency: 1482
   color: "#009771"
-  longRange: true
+  longRange: false
 
 - type: radioChannel
   id: MarineEngineer
@@ -39,7 +39,7 @@
   keycode: "и" #n in cm13
   frequency: 1483
   color: "#e4860c"
-  longRange: true
+  longRange: false
 
 - type: radioChannel
   id: MarineMilitaryPolice
@@ -47,7 +47,7 @@
   keycode: "о" #p in cm13
   frequency: 1484
   color: "#be324f"
-  longRange: true
+  longRange: false
 
 - type: radioChannel
   id: MarineRequisition
@@ -55,7 +55,7 @@
   keycode: "п" #u in cm13
   frequency: 1485
   color: "#b17324"
-  longRange: true
+  longRange: false
 
 - type: radioChannel
   id: MarineIntel
@@ -63,7 +63,7 @@
   keycode: "й" #t in cm13
   frequency: 1486
   color: "#059705"
-  longRange: true
+  longRange: false
 
 - type: radioChannel
   id: MarineJTAC
@@ -71,7 +71,7 @@
   keycode: "т" #j in CM13
   frequency: 1487
   color: "#ad3b98"
-  longRange: true
+  longRange: false
 
 # Squad channels
 - type: radioChannel
@@ -80,7 +80,7 @@
   keycode: "а" #a in cm13
   frequency: 1491
   color: "#dc0a0a"
-  longRange: true
+  longRange: false
 
 - type: radioChannel
   id: MarineBravo
@@ -88,7 +88,7 @@
   keycode: "б" #b in cm13
   frequency: 1492
   color: "#f2af03"
-  longRange: true
+  longRange: false
 
 - type: radioChannel
   id: MarineCharlie
@@ -96,7 +96,7 @@
   keycode: "ч" #c in cm13
   frequency: 1493
   color: "#a94ac2"
-  longRange: true
+  longRange: false
 
 - type: radioChannel
   id: MarineDelta
@@ -104,7 +104,7 @@
   keycode: "д" #d in cm13
   frequency: 1494
   color: "#038ae1"
-  longRange: true
+  longRange: false
 
 - type: radioChannel
   id: MarineEcho
@@ -112,7 +112,7 @@
   keycode: "э" #e in cm13
   frequency: 1495
   color: "#3be1b1"
-  longRange: true
+  longRange: false
 
 - type: radioChannel
   id: MarineFoxtrot
@@ -120,7 +120,7 @@
   keycode: "ф" #f in cm13
   frequency: 1496
   color: "#c23c07"
-  longRange: true
+  longRange: false
 
 # Non USCM
 - type: radioChannel
@@ -129,7 +129,7 @@
   keycode: "к" #o in cm13
   frequency: 1381
   color: "#cf40a6" #todo cm14
-  longRange: true
+  longRange: false
 
 - type: radioChannel # Only used by Corporate Liason to hand out to bodyguards / command.
   id: WY

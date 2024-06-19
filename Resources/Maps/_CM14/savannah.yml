@@ -18627,7 +18627,7 @@ entities:
     - type: MetaData
       name: СТЫКОВОЧНЫЙ ПОРТ 1
     - type: Transform
-      pos: 14.5,-7.5
+      pos: 15.5,-7.5
       parent: 1
     - type: DropshipDestination
       ship: 8000
@@ -18636,7 +18636,7 @@ entities:
     - type: MetaData
       name: СТЫКОВОЧНЫЙ ПОРТ 2
     - type: Transform
-      pos: -9.5,-7.5
+      pos: -8.5,-7.5
       parent: 1
     - type: DropshipDestination
       ship: 8186

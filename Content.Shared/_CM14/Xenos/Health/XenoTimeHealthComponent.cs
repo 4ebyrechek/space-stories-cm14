@@ -21,5 +21,5 @@ public sealed partial class XenoTimeHealthComponent : Component
     public FixedPoint2 DeadThreshold;
 
     [DataField, AutoNetworkedField]
-    public string NamePrefix = "Immature";
+    public string NamePrefix = "Молодая";
 }

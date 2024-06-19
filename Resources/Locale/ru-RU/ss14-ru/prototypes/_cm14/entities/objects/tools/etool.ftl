@@ -1,2 +1,2 @@
-ent-CMEntrenchingTool = инструмент для рытья траншей
+ent-CMEntrenchingTool = складная лопата
     .desc = Складная лопата для быстрого создания траншей.
