@@ -117,6 +117,21 @@
 
 - type: entity
   id: CMVendorBundleArmorM3Medium
+  parent: CMVendorBundleRiflemanApparel
+  id: RMCVendorBundleMilitaryPoliceApparel
+  name: Essential Police Set
+  components:
+  - type: Sprite
+    sprite: _RMC14/Objects/Clothing/Eyes/Glasses/security_glasses.rsi
+    state: icon
+  - type: CMVendorBundle
+    bundle:
+    - CMGlassesSecurity
+    - CMBeltSecurityFilled
+    - CMArmorHelmetM10MP
+
+- type: entity
+  id: CMVendorBundleArmorM3Medium
   name: medium armor
   components:
   - type: Sprite

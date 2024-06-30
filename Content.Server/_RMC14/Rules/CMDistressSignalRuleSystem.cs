@@ -254,8 +254,19 @@ public sealed class CMDistressSignalRuleSystem : GameRuleSystem<CMDistressSignal
                 var list = xenoCandidates[i];
                 while (list.Count > 0 && selected < totalXenos)
                 {
-                    if (SpawnXeno(list, comp.LarvaEnt) != null)
+                    if (queenSelected == null)
+                    {
+                        queenSelected = SpawnXeno(list, comp.QueenEnt);
+                        if (queenSelected != null)
+                        {
+                            totalXenos--;
+                            selected++;
+                        }
+                    }
+                    else if (SpawnXeno(list, comp.LarvaEnt) != null)
+                    {
                         selected++;
+                    }
                 }
             }
 
@@ -467,12 +478,14 @@ public sealed class CMDistressSignalRuleSystem : GameRuleSystem<CMDistressSignal
             if (!GameTicker.IsGameRuleAdded(uid, gameRule))
                 continue;
 
-            var xenos = EntityQueryEnumerator<XenoComponent, MobStateComponent, TransformComponent>();
+            distress.NextCheck ??= Timing.CurTime + distress.CheckEvery;
+
             var xenosAlive = false;
+            var xenos = EntityQueryEnumerator<ActorComponent, XenoComponent, MobStateComponent, TransformComponent>();
             xenosCount = 0;
             xenosAliveCount = 0;
             var xenosOnShip = false;
-            while (xenos.MoveNext(out var xenoId, out var xeno, out var mobState, out var xform))
+            while (xenos.MoveNext(out var xenoId, out _, out var xeno, out var mobState, out var xform))
             {
                 xenosCount++;
                 if (!xeno.ContributesToVictory)
@@ -488,12 +501,12 @@ public sealed class CMDistressSignalRuleSystem : GameRuleSystem<CMDistressSignal
                     xenosOnShip = true;
             }
 
-            var marines = EntityQueryEnumerator<MarineComponent, MobStateComponent, TransformComponent>();
+            var marines = EntityQueryEnumerator<ActorComponent, MarineComponent, MobStateComponent, TransformComponent>();
             var marinesAlive = false;
             marinesCount = 0;
             marinesAliveCount = 0;
             var marinesOnShip = false;
-            while (marines.MoveNext(out var marineId, out _, out var mobState, out var xform))
+            while (marines.MoveNext(out var marineId, out _, out _, out var mobState, out var xform))
             {
                 marinesCount++;
                 if (HasComp<VictimInfectedComponent>(marineId) || HasComp<VictimBurstComponent>(marineId))
@@ -773,27 +786,29 @@ public sealed class CMDistressSignalRuleSystem : GameRuleSystem<CMDistressSignal
             }
         }
 
-        var rules = QueryActiveRules();
-        while (rules.MoveNext(out _, out var distress, out _))
+        if (Timing.CurTime >= component.NextCheck)
         {
-            if (_xenoEvolution.HasLiving<XenoEvolutionGranterComponent>(1))
-                distress.QueenDiedCheck = null;
+            component.NextCheck = Timing.CurTime + component.CheckEvery;
+            CheckRoundShouldEnd();
+        }
 
-            if (distress.QueenDiedCheck == null)
-                continue;
+        if (_xenoEvolution.HasLiving<XenoEvolutionGranterComponent>(1))
+            component.QueenDiedCheck = null;
 
-            if (Timing.CurTime >= distress.QueenDiedCheck)
+        if (component.QueenDiedCheck == null)
+            return;
+
+        if (Timing.CurTime >= component.QueenDiedCheck)
+        {
+            if (_xenoEvolution.HasLiving<XenoComponent>(4))
             {
-                if (_xenoEvolution.HasLiving<XenoComponent>(4))
-                {
-                    distress.Result = DistressSignalRuleResult.MinorMarineVictory;
-                    _roundEnd.EndRound();
-                }
-                else
-                {
-                    distress.Result = DistressSignalRuleResult.MajorMarineVictory;
-                    _roundEnd.EndRound();
-                }
+                component.Result = DistressSignalRuleResult.MinorMarineVictory;
+                _roundEnd.EndRound();
+            }
+            else
+            {
+                component.Result = DistressSignalRuleResult.MajorMarineVictory;
+                _roundEnd.EndRound();
             }
         }
     }
