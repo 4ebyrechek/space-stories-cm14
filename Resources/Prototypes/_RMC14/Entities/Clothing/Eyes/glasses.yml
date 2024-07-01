@@ -38,6 +38,28 @@
           False: { state: icon }
 
 - type: entity
+  parent: ClothingEyesBase
+  id: CMGlassesM56
+  name: M56 head mounted sight
+  description: A headset and goggles system for the M56 Smartgun. Has a low-res short-range imager, allowing for view of terrain
+  components:
+  - type: Sprite
+    sprite: _RMC14/Objects/Clothing/Eyes/Glasses/m56.rsi
+    layers:
+    - state: icon
+      map: [ "nightVisionItemLayer" ]
+  - type: Clothing
+    sprite: _RMC14/Objects/Clothing/Eyes/Glasses/m56.rsi
+  - type: NightVisionItem
+  - type: Appearance
+  - type: GenericVisualizer
+    visuals:
+      enum.NightVisionItemVisuals.Active:
+        nightVisionItemLayer:
+          True: { state: icon_on }
+          False: { state: icon }
+
+- type: entity
   parent: ClothingEyesHudMedical
   id: RMCGlassesMedicalHUDGlasses
   name: medical HUD glasses
