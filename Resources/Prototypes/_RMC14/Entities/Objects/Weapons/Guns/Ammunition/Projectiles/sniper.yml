@@ -61,5 +61,6 @@
     damage:
       types:
         Piercing: 125
+        Structural: 1000
   - type: CMArmorPiercing
     amount: 50
