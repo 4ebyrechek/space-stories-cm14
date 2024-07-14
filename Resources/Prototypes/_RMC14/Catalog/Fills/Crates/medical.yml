@@ -7,7 +7,7 @@
     contents:
       - id: CMSurgeryTrayFull
       - id: CMMaskGasMedical
-      - id: CMScrubsColorGreen
+      - id: CMScrubsGreen
       - id: CMBoxSterileMask
       - id: CMBoxLatexGloves
       - id: CMAnestheticTankFilled
