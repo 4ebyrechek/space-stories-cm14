@@ -1,8 +1,8 @@
-- type: entity
+﻿- type: entity
   parent: BaseStorageItem
-  id: CMEssentialSmartGunOperatorSet
-  name: M56 smartgun system case
-  description: "A large case containing an M56B Smartgun, M56 combat harness, head mounted sight and powerpack.\n\nNOTE: You cannot put items back inside this case."
+  id: CMSmartGunOperatorEquipmentCase
+  name: ML66A smart gun system case
+  description: "A large case containing an ML66A Smartgun, ML66A combat harness, head mounted sight and powerpack.\n\nNOTE: You cannot put items back inside this case."
   components:
   - type: Sprite
     noRot: true
@@ -10,8 +10,8 @@
     layers:
     - state: closed
       map: [ base ]
-    - state: demo
-      map: [ demo ]
+    - state: smartgun
+      map: [ label ]
   - type: Icon
     sprite: _RMC14/Objects/loadout_kits.rsi
     state: closed
@@ -22,7 +22,7 @@
         base:
           True: { state: open }
           False: { state: closed }
-        demo:
+        label:
           True: { visible: false }
           False: { visible: true }
   - type: Item
@@ -30,17 +30,15 @@
   - type: Storage
     maxItemSize: Huge
     grid:
-    - 0,0,11,1
+    - 0,0,13,1
   - type: StorageFill
     contents:
-    - id: CMGlassesM56
-    - id: CMWeaponSmartGun
-    # - id: smartgun DV9 battery
-    - id: CMArmorM56CombatHarness
-    - id: CMM56SmartGunDrum
-    - id: CMM56SmartGunDrum
-  - type: CMChangeUserOnVend
-    addComponents:
-    - type: SmartGunWhitelist
+    - id: RMCGlassesSmartGunSight
+    - id: RMCSmartGun
+    - id: RMCPowerCellSmartgun
+    - id: CMArmorSmartGunCombatHarness
+    - id: RMCMagazineSmartGun
+    - id: RMCMagazineSmartGun
+    - id: RMCMagazineSmartGun
   - type: RemoveOnlyStorage
   - type: FixedItemSizeStorage

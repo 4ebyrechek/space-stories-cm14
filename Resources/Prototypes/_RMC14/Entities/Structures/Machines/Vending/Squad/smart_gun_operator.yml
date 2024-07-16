@@ -16,22 +16,15 @@
     - CMSmartGunOperator
     sections:
     - name: Набор умного оружия (обязательно)
-      choices: { SquadLeaderKit: 1 }
+      takeAll: CMSmartGunSet
       entries:
-      - id: CMEssentialSmartGunOperatorSet
-        points: 0
-    - name: Боеприпасы для умного оружия
+      - id: CMSmartGunOperatorEquipmentCase
+    - name: Обвесы
+      choices: { CMGunAttachments: 1 }
       entries:
-      - id: CMM56SmartGunDrum
-        points: 15
-    - name: Навесное оборудование для оружия
-      entries: [ ]
-    #- id: CMLaserSight
-    #  points: 0
-    #- id: CMRedDotSight
-    #  points: 0
-    #- id: CMReflexSight
-    #  points: 0
+#      - id: RMCAttachmentLaserSight # TODO RMC14 when other pistols are available here
+      - id: RMCAttachmentS5RedDotSight
+      - id: RMCAttachmentS6ReflexSight
     - name: Взрывчатка
       entries:
       - id: CMPacketGrenadeHighExplosiveFilled
@@ -52,6 +45,14 @@
     #  points: 20
     #- id: CMM20MineBox4
     #  points: 20
+    - name: Боеприпасы к оружию
+      entries:
+      - id: CMMagazinePistolMK80
+        points: 5
+    - name: Огнестрельное оружие ограниченного поражения
+      entries:
+      - id: CMWeaponPistolMK80
+        points: 15
     - name: Предметы одежды
       entries:
     #- id: CMScabbardMacheteFull
@@ -70,6 +71,8 @@
         points: 5
     #- id: CMFultonDeviceStack
     #  points: 5
+      - id: RMCPowerCellSmartgun
+        points: 15
     - name: Бинокли
       entries: [ ]
     #- id: CMBinoculars
@@ -93,16 +96,12 @@
     - name: Радиоключи
       entries:
       - id: CMEncryptionKeyEngineer
-        amount: 5
         points: 5
       - id: CMEncryptionKeyIntel
-        amount: 5
         points: 5
       - id: CMEncryptionKeyJTAC
-        amount: 5
         points: 5
       - id: CMEncryptionKeyRequisition
-        amount: 5
         points: 5
 
 - type: entity
@@ -123,27 +122,31 @@
     - name: Стандартное снаряжение
       takeAll: CMStandard
       entries:
-      - id: CMVendorBundleRiflemanApparel # TODO any RMC14 smart gun operator specific items?
+      - id: CMVendorBundleRiflemanApparel
       - id: CMMRE
       #- id: CMMap # TODO: Make a map
-    - name: Пояс
+    - name: Пояса
       choices: { CMBelt: 1 }
       entries:
-      - id: CMBeltSmartGunOperatorFull
-      - id: CMBeltSmartGunOperatorAmmoFull
+     #- id: CMM802SmartGunOperatorSidearmBeltFilled
+      - id: CMBeltSmartGunOperatorFilled
     - name: Подсумки
       choices: { CMPouch: 2 }
       entries:
       - id: CMPouchFlareFilled
         name: подсумок фаеров (заполненный)
-      - id: CMElectronicsPouch
+#      - id: CMPouchElectronics # TODO RMC14
       - id: CMPouchFirstAidInjectors
         name: подсумок первой помощи (многоразовые инъекторы)
+        recommended: true
       - id: CMPouchFirstAidSplintsGauzeOintment
         name: подсумок первой помощи (марля, мазь) # TODO RMC14 splints comma
+        recommended: true
       - id: CMPouchFirstAidPills
         name: подсумок первой помощи (таблетки)
+        recommended: true
       - id: CMPouchMagazinePistolLarge
+        recommended: true
       - id: CMPouchMagazine
       - id: CMPouchShotgun
       - id: CMPouchGeneralMedium
@@ -154,6 +157,7 @@
       choices: { CMAccessories: 1 }
       entries:
       - id: CMWebbingBrown
+        recommended: true
       - id: CMWebbingBlack
     #- id: CMShoulderHolster
       - id: CMWebbing
