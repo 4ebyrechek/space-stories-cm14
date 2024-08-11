@@ -3,55 +3,55 @@
 # If you wish for this file, or LV624, to be public you may recreate them yourself and PR it to the repo.
 - type: gameMap
   id: Almayer
-  mapName: Almayer
+  mapName: USS Almayer
   mapPath: /Maps/_RMC14/almayer.yml
-  minPlayers: 90
+  minPlayers: 200
   maxRandomOffset: 0
   randomRotation: false
-  fallback: true
+  fallback: false
   stations:
     Almayer:
-      stationProto: StandardNanotrasenStation
+      stationProto: StandardUNMCWarship
       components:
       - type: StationNameSetup
         mapNameTemplate: 'USS Almayer'
       - type: StationJobs
         availableJobs:
-          #Command
+          # Command
           CMCommandingOfficer: [1, 1]
           CMExecutiveOfficer: [1, 1]
           CMStaffOfficer: [4, 4]
           CMSeniorEnlistedAdvisor: [2, 2]
 
-          #Military Police
+          # Military Police
           CMChiefMP: [1, 1]
           CMMilitaryWarden: [1, 1]
           CMMilitaryPolice: [5, 8]
 
-          #Auxiliary
+          # Auxiliary
           CMAuxiliarySupportOfficer: [1, 1]
-#          CMIntelOfficer: [4, 4]
-          CMPilotDropship: [2, 2] # TODO RMC14 1
-#          CMPilotGunship: [1, 1]
+          # CMIntelOfficer: [4, 4]
+          CMPilotDropship: [1, 1]
+          CMPilotGunship: [1, 1]
           CMDropshipCrewChief: [2, 2]
 
-          #Engineering
-#          CMChiefEngineer: [1, 1]
-#          CMOrdnanceTech: [3, 3]
-#          CMMaintTech: [1, 1]
+          # Engineering
+          # CMChiefEngineer: [1, 1]
+          # CMOrdnanceTech: [3, 3]
+          # CMMaintTech: [1, 1]
 
-          #Medical
+          # Medical
           CMCMO: [1, 1]
           CMDoctor: [4, 6]
           CMNurse: [4, 6]
-#          CMResearcher: [2, 2]
+          # CMResearcher: [2, 2]
 
-          #Requisition
+          # Requisition
           CMQuartermaster: [1, 1]
           CMCargoTech: [4, 4]
-#          CMMessTech: [1, 1]
+          # CMMessTech: [1, 1]
 
-          #Marines
+          # Marines
           CMSquadLeader: [4, 4]
           CMFireteamLeader: [4, 8]
           CMSmartGunOperator: [4, 4]
@@ -59,9 +59,10 @@
           CMCombatTech: [8, 12]
           CMHospitalCorpsman: [8, 16]
           CMRifleman: [ -1, -1 ]
+          CMCadet: [ -1, -1 ]
 
-          #Civilians
-          CMCorrespondent: [2, 2]
+          # Civilians
+          CMCorrespondent: [1, 1]
 
           # Other
           CMLiaison: [1, 1]

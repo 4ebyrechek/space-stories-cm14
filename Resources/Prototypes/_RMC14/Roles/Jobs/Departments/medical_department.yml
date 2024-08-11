@@ -6,5 +6,5 @@
   roles:
   - CMCMO
   - CMDoctor
-  # - CMResearcher
+  - CMResearcher
   - CMNurse

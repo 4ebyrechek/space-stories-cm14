@@ -34,6 +34,7 @@
         RMCSkillPowerLoader: 2
     - type: MarineOrders
     - type: BaseGunWhitelist
+  hidden: true # TODO RMC14
 
 - type: startingGear
   id: CMGearChiefEngineer
