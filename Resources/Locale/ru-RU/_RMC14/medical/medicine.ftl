@@ -32,3 +32,14 @@ reagent-name-cmclonexadone = Клонексадон
 reagent-desc-cmclonexadone = Передовой криогенный препарат, изготовленный на основе криоксадона. Лечит большинство видов повреждений тканей. Для правильного метаболизма требует температуры ниже 170 К.
 reagent-name-cmacid = Кислота
 reagent-desc-cmacid = Кислота
+# Medical Icon Labels
+rmc-tricordazine-container-label-text = ТРИ
+rmc-bicaridine-container-label-text = БИ
+rmc-kelotane-container-label-text = КЕ
+rmc-dexalin-container-label-text = ДЕ
+rmc-dylovene-container-label-text = ДИ
+rmc-inaprovaline-container-label-text = ИН
+rmc-first-aid-container-label-text = ПП
+rmc-emergency-medicine-container-label-text = А
+rmc-dexalin-plus-container-label-text = ДЕ+
+rmc-epinephrine-container-label-text = ЭПИ

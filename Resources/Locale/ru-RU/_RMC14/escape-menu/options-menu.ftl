@@ -4,6 +4,7 @@ ui-options-function-rmc-activate-attachable-rail = Активируйте рел
 ui-options-function-rmc-activate-attachable-stock = Активировать приклад
 ui-options-function-rmc-activate-attachable-underbarrel = Активируйте подствольное
 ui-options-function-rmc-field-strip-held-item = Полевая лента, удерживаемая элементом
+ui-options-function-rmc-cycle-fire-mode = Цикл режима огня
 ui-options-header-cm = Колониальные Морпехи 14
 ui-options-function-cm-activate-attachable-barrel = Активировать крепление ствола
 ui-options-function-cm-activate-attachable-rail = Активировать крепление рельса

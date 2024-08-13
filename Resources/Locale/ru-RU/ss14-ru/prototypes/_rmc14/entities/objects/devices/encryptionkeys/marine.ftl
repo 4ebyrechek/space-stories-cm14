@@ -1,0 +1,16 @@
+ent-CMEncryptionKeySquadLeader = ключ шифрования командира отряда
+    .desc = { ent-CMEncryptionKey.desc }
+ent-CMEncryptionKeyAlpha = ключ шифрование альфы
+    .desc = { ent-CMEncryptionKey.desc }
+ent-CMEncryptionKeyBravo = ключ шифрование браво
+    .desc = { ent-CMEncryptionKey.desc }
+ent-CMEncryptionKeyCharlie = ключ шифрование чарли
+    .desc = { ent-CMEncryptionKey.desc }
+ent-CMEncryptionKeyDelta = ключ шифрование дельта
+    .desc = { ent-CMEncryptionKey.desc }
+ent-CMEncryptionKeyEcho = ключ шифрование эхо
+    .desc = { ent-CMEncryptionKey.desc }
+ent-CMEncryptionKeyFoxtrot = ключ шифрование фокстрот
+    .desc = { ent-CMEncryptionKey.desc }
+ent-CMEncryptionKeySOF = ключ шифрования sof
+    .desc = { ent-CMEncryptionKey.desc }

@@ -1,6 +1,6 @@
-ent-CMCrateClothingLargePouches = ящик подсумков (2х Пистолет, Магазин, Общий)
+ent-CMCrateClothingLargePouches = ящик подсумков (х2 Пистолет, Магазин, Общий)
     .desc = { ent-CMCrateWeldable.desc }
-ent-CMCrateClothingMedicalPouches = ящик медицинских подсумков (1х первая помощь, медицинский, шприц, аптечка)
+ent-CMCrateClothingMedicalPouches = ящик медицинских подсумков (х1 первая помощь, медицинский, шприц, аптечка)
     .desc = { ent-CMCrateWeldable.desc }
 ent-CMCrateClothingWebbing = ящик с разгрузкой (x4)
     .desc = { ent-CMCrateWeldable.desc }

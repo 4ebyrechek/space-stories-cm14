@@ -1,3 +1,7 @@
+ent-RMCWindowFrameSolaris = { ent-RMCBaseWindowFrame }
+    .desc = { ent-RMCBaseWindowFrame.desc }
+ent-RMCWindowFrameSolarisReinforced = { ent-RMCBaseWindowFrame }
+    .desc = { ent-RMCBaseWindowFrame.desc }
 ent-CMWindowSolaris = окно
     .desc = Стеклянная витрина в настенной раме.
 ent-CMWindowSolarisReinforced = армированное окно

@@ -1,10 +1,10 @@
 ent-CMSurgeryBase = { "" }
     .desc = { "" }
-ent-CMSurgeryOpenIncision = Открытый Разрез
+ent-CMSurgeryOpenIncision = Разрезать
     .desc = { ent-CMSurgeryBase.desc }
-ent-CMSurgeryCloseIncision = Закрытый Разрез
+ent-CMSurgeryCloseIncision = Закрыть разрез
     .desc = { ent-CMSurgeryBase.desc }
-ent-CMSurgeryOpenRibcage = Открытие Грудной Клетки
+ent-CMSurgeryOpenRibcage = Открыть грудную клетку
     .desc = { ent-CMSurgeryBase.desc }
-ent-CMSurgeryAlienEmbryoRemoval = Удаление Чужеродного Эмбриона
+ent-CMSurgeryAlienEmbryoRemoval = Удалить чужеродный эмбрион
     .desc = Удаление чужеродного эмбриона из организма.

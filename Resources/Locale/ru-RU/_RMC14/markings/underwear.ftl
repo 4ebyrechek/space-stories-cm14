@@ -1,0 +1,10 @@
+marking-RMCUnderwearBoxers = Боксеры
+marking-RMCUnderwearBoxers-c_boxers = Боксеры
+marking-RMCUnderwearBriefs = Брифы
+marking-RMCUnderwearBriefs-c_briefs = Брифы
+marking-RMCUnderwearLowriders = Низкие бортики
+marking-RMCUnderwearLowriders-c_lowriders = Низкие бортики
+marking-RMCUnderwearSatin = Сатин
+marking-RMCUnderwearSatin-c_satin = Сатин
+marking-RMCUnderwearTanga = Танга
+marking-RMCUnderwearTanga-c_tanga = Танга

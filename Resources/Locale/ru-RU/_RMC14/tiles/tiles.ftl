@@ -1,5 +1,6 @@
 tiles-cm-default = металлическая плитка
 tiles-cm-default-no-weeds = металлическая плитка (без сорняков)
+tiles-rmc-underplating-no-weeds = покрытие (без сорняков)
 tiles-cm-plate = металлическая плитка
 tiles-cm-office = офисная плитка
 tiles-cm-sterile = металлическая стерильная плитка

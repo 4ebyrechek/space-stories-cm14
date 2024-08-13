@@ -6,7 +6,3 @@ ent-WeaponRifleM54CE2 = тяжелая импульсная винтовка M54
     .desc = Крупнокалиберное оружие поддержки отряда, способное вести длительный подавляющий огонь с навесной позиции. Несмотря на неустойчивость и меньшую точность, ее можно таскать и стрелять из нее двумя руками.
 ent-WeaponRifleM4SPR = боевая винтовка M4SPR
     .desc = Боевая винтовка M4SPR - это винтовка для метких стрелков, состоящая на вооружении USCM. Боевая винтовка M4SPR, выполненная по схеме булл-пап, идеально подходит для разведки и огневой поддержки.
-ent-CadetWeaponRifleM54C = { ent-WeaponRifleM54C }
-    .desc = { ent-WeaponRifleM54C.desc }
-ent-CadetWeaponRifleM4SPR = { ent-WeaponRifleM4SPR }
-    .desc = { ent-WeaponRifleM4SPR.desc }
