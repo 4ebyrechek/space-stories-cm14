@@ -167,3 +167,11 @@
     exceptEffects:
     - Stun
     - KnockedDown
+  - type: TacticalMapUser
+    xenos: true
+    canDraw: true
+    liveUpdate: true
+  - type: TacticalMapIcon
+    icon:
+      sprite: _RMC14/Interface/map_blips.rsi
+      state: xenoqueen

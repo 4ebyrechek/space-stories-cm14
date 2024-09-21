@@ -707,6 +707,7 @@ namespace Content.Shared.Preferences
                 SidearmName = ValidateNamedItem(NamedItems.SidearmName),
                 HelmetName = ValidateNamedItem(NamedItems.HelmetName),
                 ArmorName = ValidateNamedItem(NamedItems.ArmorName),
+                SentryName = ValidateNamedItem(NamedItems.SentryName),
             };
         }
 

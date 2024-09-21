@@ -283,6 +283,7 @@ namespace Content.Server.Database
                     SidearmName = profile.NamedItems?.SidearmName,
                     HelmetName = profile.NamedItems?.HelmetName,
                     ArmorName = profile.NamedItems?.ArmorName,
+                    SentryName = profile.NamedItems?.SentryName,
                 }
             );
         }
@@ -372,6 +373,7 @@ namespace Content.Server.Database
                 SidearmName = humanoid.NamedItems.SidearmName,
                 HelmetName = humanoid.NamedItems.HelmetName,
                 ArmorName = humanoid.NamedItems.ArmorName,
+                SentryName = humanoid.NamedItems.SentryName,
             };
 
             return profile;

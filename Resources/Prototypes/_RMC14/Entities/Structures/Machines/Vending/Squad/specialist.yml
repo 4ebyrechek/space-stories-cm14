@@ -177,7 +177,8 @@
         points: 10
     - name: Предметы одежды
       entries:
-    #- id: CMScabbardMacheteFull
+      - id: RMCScabbardMacheteFilled
+        points: 6
       - id: RMCPouchMacheteFilled
         points: 15
     #- id: CMMarineRadioTelephonePack

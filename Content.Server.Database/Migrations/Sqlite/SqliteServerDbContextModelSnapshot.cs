@@ -1009,6 +1009,11 @@ namespace Content.Server.Database.Migrations.Sqlite
                         .HasColumnType("TEXT")
                         .HasColumnName("primary_gun_name");
 
+                    b.Property<string>("SentryName")
+                        .HasMaxLength(20)
+                        .HasColumnType("TEXT")
+                        .HasColumnName("sentry_name");
+
                     b.Property<string>("SidearmName")
                         .HasMaxLength(20)
                         .HasColumnType("TEXT")
