@@ -2811,6 +2811,7 @@ entities:
           decals:
             1353: -42.10205,17.008104
     - type: AreaGrid
+      colors: {}
       areas:
         21,109: RMCAreaAlmayerCommandAiroom
         21,108: RMCAreaAlmayerCommandAiroom
@@ -29222,6 +29223,32 @@ entities:
     - type: Transform
       pos: 87.5,-16.5
       parent: 1
+- proto: AppleSeeds
+  entities:
+  - uid: 21445
+    components:
+    - type: Transform
+      pos: -119.5,90.5
+      parent: 1
+  - uid: 21450
+    components:
+    - type: Transform
+      pos: -116.5,90.5
+      parent: 1
+- proto: Ash
+  entities:
+  - uid: 21475
+    components:
+    - type: Transform
+      pos: -107.10474,91.7907
+      parent: 1
+- proto: Ashtray
+  entities:
+  - uid: 21474
+    components:
+    - type: Transform
+      pos: -106.41724,92.55713
+      parent: 1
 - proto: Bedroll
   entities:
   - uid: 658
@@ -29259,6 +29286,12 @@ entities:
       parent: 1
     - type: ApcPowerReceiver
       powerLoad: 0
+    - type: DeviceLinkSource
+      linkedPorts:
+        16595:
+        - Start: Close
+        - Timer: AutoClose
+        - Timer: Open
     missingComponents:
     - AccessReader
   - uid: 663
@@ -29268,6 +29301,12 @@ entities:
       parent: 1
     - type: ApcPowerReceiver
       powerLoad: 0
+    - type: DeviceLinkSource
+      linkedPorts:
+        16596:
+        - Start: Close
+        - Timer: AutoClose
+        - Timer: Open
     missingComponents:
     - AccessReader
   - uid: 664
@@ -29277,6 +29316,12 @@ entities:
       parent: 1
     - type: ApcPowerReceiver
       powerLoad: 0
+    - type: DeviceLinkSource
+      linkedPorts:
+        16597:
+        - Start: Close
+        - Timer: AutoClose
+        - Timer: Open
     missingComponents:
     - AccessReader
   - uid: 665
@@ -29286,6 +29331,12 @@ entities:
       parent: 1
     - type: ApcPowerReceiver
       powerLoad: 0
+    - type: DeviceLinkSource
+      linkedPorts:
+        16598:
+        - Start: Close
+        - Timer: AutoClose
+        - Timer: Open
     missingComponents:
     - AccessReader
   - uid: 666
@@ -29295,6 +29346,12 @@ entities:
       parent: 1
     - type: ApcPowerReceiver
       powerLoad: 0
+    - type: DeviceLinkSource
+      linkedPorts:
+        16599:
+        - Start: Close
+        - Timer: AutoClose
+        - Timer: Open
     missingComponents:
     - AccessReader
   - uid: 667
@@ -29304,6 +29361,12 @@ entities:
       parent: 1
     - type: ApcPowerReceiver
       powerLoad: 0
+    - type: DeviceLinkSource
+      linkedPorts:
+        16600:
+        - Start: Close
+        - Timer: AutoClose
+        - Timer: Open
     missingComponents:
     - AccessReader
   - uid: 668
@@ -29648,6 +29711,13 @@ entities:
     - type: Transform
       rot: 3.141592653589793 rad
       pos: -43.5,-21.5
+      parent: 1
+- proto: CarrotSeeds
+  entities:
+  - uid: 21443
+    components:
+    - type: Transform
+      pos: -120.5,90.5
       parent: 1
 - proto: CheapLighter
   entities:
@@ -54632,36 +54702,6 @@ entities:
     - type: Transform
       pos: 13.5,-34.5
       parent: 1
-  - uid: 5319
-    components:
-    - type: Transform
-      pos: -102.5,99.5
-      parent: 1
-  - uid: 5320
-    components:
-    - type: Transform
-      pos: -105.5,99.5
-      parent: 1
-  - uid: 5321
-    components:
-    - type: Transform
-      pos: -108.5,99.5
-      parent: 1
-  - uid: 5322
-    components:
-    - type: Transform
-      pos: -111.5,99.5
-      parent: 1
-  - uid: 5323
-    components:
-    - type: Transform
-      pos: -114.5,99.5
-      parent: 1
-  - uid: 5324
-    components:
-    - type: Transform
-      pos: -117.5,99.5
-      parent: 1
   - uid: 5325
     components:
     - type: Transform
@@ -58367,12 +58407,6 @@ entities:
     - type: Transform
       rot: 3.141592653589793 rad
       pos: -116.5,90.5
-      parent: 1
-  - uid: 5975
-    components:
-    - type: Transform
-      rot: 3.141592653589793 rad
-      pos: -115.5,90.5
       parent: 1
   - uid: 5976
     components:
@@ -66750,6 +66784,36 @@ entities:
       parent: 1
 - proto: CMLockerBase
   entities:
+  - uid: 5319
+    components:
+    - type: Transform
+      pos: -117.5,99.5
+      parent: 1
+  - uid: 5320
+    components:
+    - type: Transform
+      pos: -114.5,99.5
+      parent: 1
+  - uid: 5321
+    components:
+    - type: Transform
+      pos: -111.5,99.5
+      parent: 1
+  - uid: 5322
+    components:
+    - type: Transform
+      pos: -108.5,99.5
+      parent: 1
+  - uid: 5323
+    components:
+    - type: Transform
+      pos: -105.5,99.5
+      parent: 1
+  - uid: 5324
+    components:
+    - type: Transform
+      pos: -102.5,99.5
+      parent: 1
   - uid: 7409
     components:
     - type: Transform
@@ -68527,6 +68591,11 @@ entities:
     - type: Transform
       pos: 13.810471,-18.330208
       parent: 1
+  - uid: 21471
+    components:
+    - type: Transform
+      pos: -109.88599,87.67705
+      parent: 1
 - proto: CMPaperBin20
   entities:
   - uid: 7624
@@ -68916,6 +68985,11 @@ entities:
     components:
     - type: Transform
       pos: 13.794846,-16.5471
+      parent: 1
+  - uid: 21472
+    components:
+    - type: Transform
+      pos: -110.22974,87.37986
       parent: 1
 - proto: CMPlatform
   entities:
@@ -78985,6 +79059,13 @@ entities:
     - type: Transform
       pos: -3.5,94.5
       parent: 1
+- proto: CMVendorChess
+  entities:
+  - uid: 21438
+    components:
+    - type: Transform
+      pos: -107.5,92.5
+      parent: 1
 - proto: CMVendorCigs
   entities:
   - uid: 9370
@@ -79061,6 +79142,11 @@ entities:
     components:
     - type: Transform
       pos: 57.46942,19.99934
+      parent: 1
+  - uid: 21435
+    components:
+    - type: Transform
+      pos: -86.5,96.5
       parent: 1
 - proto: CMVendorCircuits
   entities:
@@ -79504,6 +79590,11 @@ entities:
       parent: 1
 - proto: CMVendorSeeds
   entities:
+  - uid: 5975
+    components:
+    - type: Transform
+      pos: -115.5,90.5
+      parent: 1
   - uid: 9469
     components:
     - type: Transform
@@ -120917,6 +121008,11 @@ entities:
     - type: Transform
       pos: 39.339035,77.596275
       parent: 1
+  - uid: 21464
+    components:
+    - type: Transform
+      pos: -117.52366,87.59884
+      parent: 1
 - proto: CMWrench
   entities:
   - uid: 17474
@@ -122528,6 +122624,13 @@ entities:
     - type: Transform
       pos: -64.5,-15.5
       parent: 1
+- proto: CrayonBlue
+  entities:
+  - uid: 21473
+    components:
+    - type: Transform
+      pos: -110.69849,87.80218
+      parent: 1
 - proto: CryoPod
   entities:
   - uid: 17771
@@ -122558,6 +122661,25 @@ entities:
     components:
     - type: Transform
       pos: -8.5,104.5
+      parent: 1
+- proto: d20Dice
+  entities:
+  - uid: 21465
+    components:
+    - type: Transform
+      pos: -111.35466,89.53836
+      parent: 1
+  - uid: 21470
+    components:
+    - type: Transform
+      pos: -110.38599,87.56756
+      parent: 1
+- proto: d6Dice
+  entities:
+  - uid: 21466
+    components:
+    - type: Transform
+      pos: -109.54224,87.52063
       parent: 1
 - proto: DisposalBend
   entities:
@@ -125709,6 +125831,43 @@ entities:
     components:
     - type: Transform
       pos: -12.390977,81.5926
+      parent: 1
+- proto: EZNutrientChemistryBottle
+  entities:
+  - uid: 21455
+    components:
+    - type: Transform
+      pos: -117.5,87.5
+      parent: 1
+  - uid: 21456
+    components:
+    - type: Transform
+      pos: -117.5,87.5
+      parent: 1
+  - uid: 21457
+    components:
+    - type: Transform
+      pos: -117.5,87.5
+      parent: 1
+  - uid: 21458
+    components:
+    - type: Transform
+      pos: -116.5,87.5
+      parent: 1
+  - uid: 21459
+    components:
+    - type: Transform
+      pos: -116.5,87.5
+      parent: 1
+  - uid: 21460
+    components:
+    - type: Transform
+      pos: -116.5,87.5
+      parent: 1
+  - uid: 21461
+    components:
+    - type: Transform
+      pos: -116.5,87.5
       parent: 1
 - proto: FireAxeCabinetFilled
   entities:
@@ -136163,6 +136322,33 @@ entities:
     - type: Transform
       pos: 93.5,-0.5
       parent: 1
+- proto: HydroponicsToolMiniHoe
+  entities:
+  - uid: 21439
+    components:
+    - type: Transform
+      pos: -116.63303,87.3173
+      parent: 1
+  - uid: 21440
+    components:
+    - type: Transform
+      pos: -116.47678,87.42679
+      parent: 1
+  - uid: 21441
+    components:
+    - type: Transform
+      pos: -116.39866,87.55192
+      parent: 1
+  - uid: 21442
+    components:
+    - type: Transform
+      pos: -117.64866,87.23909
+      parent: 1
+  - uid: 21444
+    components:
+    - type: Transform
+      pos: -117.42991,87.55192
+      parent: 1
 - proto: JanitorialTrolley
   entities:
   - uid: 19716
@@ -136204,12 +136390,36 @@ entities:
     - type: Transform
       pos: 84.5,-16.5
       parent: 1
+- proto: OrangeSeeds
+  entities:
+  - uid: 21446
+    components:
+    - type: Transform
+      pos: -117.5,90.5
+      parent: 1
 - proto: OxygenCanister
   entities:
   - uid: 19722
     components:
     - type: Transform
       pos: 81.5,-16.5
+      parent: 1
+- proto: PaperCNCSheet
+  entities:
+  - uid: 21467
+    components:
+    - type: Transform
+      pos: -109.55786,87.48935
+      parent: 1
+  - uid: 21468
+    components:
+    - type: Transform
+      pos: -110.57349,87.44243
+      parent: 1
+  - uid: 21469
+    components:
+    - type: Transform
+      pos: -110.19849,87.67705
       parent: 1
 - proto: PlasticFlapsAirtightClear
   entities:
@@ -137298,6 +137508,18 @@ entities:
     - type: Transform
       pos: -10.32522,107.60329
       parent: 1
+- proto: RMCBucket
+  entities:
+  - uid: 21462
+    components:
+    - type: Transform
+      pos: -115.66428,87.37986
+      parent: 1
+  - uid: 21463
+    components:
+    - type: Transform
+      pos: -115.36741,87.61448
+      parent: 1
 - proto: RMCCabinetBase
   entities:
   - uid: 19909
@@ -137443,6 +137665,104 @@ entities:
     components:
     - type: Transform
       pos: -10.337436,83.7751
+      parent: 1
+- proto: RMCCrashLandBarrier
+  entities:
+  - uid: 21494
+    components:
+    - type: Transform
+      rot: 1.5707963267948966 rad
+      pos: -88.5,-23.5
+      parent: 1
+  - uid: 21495
+    components:
+    - type: Transform
+      rot: 1.5707963267948966 rad
+      pos: -87.5,-23.5
+      parent: 1
+  - uid: 21496
+    components:
+    - type: Transform
+      rot: 1.5707963267948966 rad
+      pos: -86.5,-23.5
+      parent: 1
+  - uid: 21497
+    components:
+    - type: Transform
+      rot: 1.5707963267948966 rad
+      pos: -85.5,-23.5
+      parent: 1
+  - uid: 21498
+    components:
+    - type: Transform
+      rot: 1.5707963267948966 rad
+      pos: -88.5,22.5
+      parent: 1
+  - uid: 21499
+    components:
+    - type: Transform
+      rot: 1.5707963267948966 rad
+      pos: -86.5,22.5
+      parent: 1
+  - uid: 21500
+    components:
+    - type: Transform
+      rot: 1.5707963267948966 rad
+      pos: -87.5,22.5
+      parent: 1
+  - uid: 21501
+    components:
+    - type: Transform
+      rot: 1.5707963267948966 rad
+      pos: -85.5,22.5
+      parent: 1
+  - uid: 21502
+    components:
+    - type: Transform
+      rot: 1.5707963267948966 rad
+      pos: 75.5,126.5
+      parent: 1
+  - uid: 21503
+    components:
+    - type: Transform
+      rot: 1.5707963267948966 rad
+      pos: 76.5,126.5
+      parent: 1
+  - uid: 21504
+    components:
+    - type: Transform
+      rot: 1.5707963267948966 rad
+      pos: 75.5,78.5
+      parent: 1
+  - uid: 21505
+    components:
+    - type: Transform
+      rot: 1.5707963267948966 rad
+      pos: 76.5,78.5
+      parent: 1
+  - uid: 21506
+    components:
+    - type: Transform
+      rot: 1.5707963267948966 rad
+      pos: -119.5,-5.5
+      parent: 1
+  - uid: 21507
+    components:
+    - type: Transform
+      rot: 1.5707963267948966 rad
+      pos: -119.5,-6.5
+      parent: 1
+  - uid: 21508
+    components:
+    - type: Transform
+      rot: 1.5707963267948966 rad
+      pos: -119.5,7.5
+      parent: 1
+  - uid: 21509
+    components:
+    - type: Transform
+      rot: 1.5707963267948966 rad
+      pos: -119.5,6.5
       parent: 1
 - proto: RMCCrateAmmo
   entities:
@@ -137716,7 +138036,7 @@ entities:
       pos: 71.5,-14.5
       parent: 1
     - type: Door
-      secondsUntilStateChange: -63447.824
+      secondsUntilStateChange: -64907.137
       state: Opening
   - uid: 19984
     components:
@@ -137724,7 +138044,7 @@ entities:
       pos: 72.5,-14.5
       parent: 1
     - type: Door
-      secondsUntilStateChange: -63447.383
+      secondsUntilStateChange: -64906.695
       state: Opening
   - uid: 19985
     components:
@@ -137732,7 +138052,7 @@ entities:
       pos: 73.5,-14.5
       parent: 1
     - type: Door
-      secondsUntilStateChange: -63446.984
+      secondsUntilStateChange: -64906.297
       state: Opening
   - uid: 19986
     components:
@@ -137740,7 +138060,7 @@ entities:
       pos: 71.5,13.5
       parent: 1
     - type: Door
-      secondsUntilStateChange: -63441.465
+      secondsUntilStateChange: -64900.777
       state: Opening
   - uid: 19987
     components:
@@ -137748,7 +138068,7 @@ entities:
       pos: 72.5,13.5
       parent: 1
     - type: Door
-      secondsUntilStateChange: -63441.863
+      secondsUntilStateChange: -64901.176
       state: Opening
   - uid: 19988
     components:
@@ -137756,7 +138076,7 @@ entities:
       pos: 73.5,13.5
       parent: 1
     - type: Door
-      secondsUntilStateChange: -63442.26
+      secondsUntilStateChange: -64901.574
       state: Opening
 - proto: RMCDispenserChem
   entities:
@@ -142022,6 +142342,15 @@ entities:
       id: Cell6
     - type: Fixtures
       fixtures: {}
+  - uid: 21476
+    components:
+    - type: Transform
+      pos: -86.5,103.5
+      parent: 1
+    - type: RMCDoorButton
+      id: ConferenceRoom
+    - type: Fixtures
+      fixtures: {}
 - proto: RMCPortableVendorCorporate
   entities:
   - uid: 19922
@@ -143629,6 +143958,142 @@ entities:
       rot: 3.141592653589793 rad
       pos: -98.5,91.5
       parent: 1
+  - uid: 21477
+    components:
+    - type: Transform
+      rot: 3.141592653589793 rad
+      pos: -85.5,107.5
+      parent: 1
+    - type: RMCPodDoor
+      id: ConferenceRoom
+  - uid: 21478
+    components:
+    - type: Transform
+      rot: 3.141592653589793 rad
+      pos: -84.5,107.5
+      parent: 1
+    - type: RMCPodDoor
+      id: ConferenceRoom
+  - uid: 21479
+    components:
+    - type: Transform
+      rot: 3.141592653589793 rad
+      pos: -83.5,107.5
+      parent: 1
+    - type: RMCPodDoor
+      id: ConferenceRoom
+  - uid: 21480
+    components:
+    - type: Transform
+      rot: 1.5707963267948966 rad
+      pos: -80.5,103.5
+      parent: 1
+    - type: RMCPodDoor
+      id: ConferenceRoom
+  - uid: 21481
+    components:
+    - type: Transform
+      rot: 1.5707963267948966 rad
+      pos: -80.5,101.5
+      parent: 1
+    - type: RMCPodDoor
+      id: ConferenceRoom
+  - uid: 21482
+    components:
+    - type: Transform
+      rot: 1.5707963267948966 rad
+      pos: -92.5,101.5
+      parent: 1
+    - type: RMCPodDoor
+      id: ConferenceRoom
+  - uid: 21483
+    components:
+    - type: Transform
+      rot: 3.141592653589793 rad
+      pos: -84.5,97.5
+      parent: 1
+    - type: RMCPodDoor
+      id: ConferenceRoom
+  - uid: 21484
+    components:
+    - type: Transform
+      rot: 3.141592653589793 rad
+      pos: -85.5,97.5
+      parent: 1
+    - type: RMCPodDoor
+      id: ConferenceRoom
+  - uid: 21485
+    components:
+    - type: Transform
+      rot: 3.141592653589793 rad
+      pos: -83.5,97.5
+      parent: 1
+    - type: RMCPodDoor
+      id: ConferenceRoom
+  - uid: 21486
+    components:
+    - type: Transform
+      rot: 3.141592653589793 rad
+      pos: -88.5,97.5
+      parent: 1
+    - type: RMCPodDoor
+      id: ConferenceRoom
+  - uid: 21487
+    components:
+    - type: Transform
+      rot: 3.141592653589793 rad
+      pos: -89.5,97.5
+      parent: 1
+    - type: RMCPodDoor
+      id: ConferenceRoom
+  - uid: 21488
+    components:
+    - type: Transform
+      rot: 3.141592653589793 rad
+      pos: -87.5,97.5
+      parent: 1
+    - type: RMCPodDoor
+      id: ConferenceRoom
+  - uid: 21489
+    components:
+    - type: Transform
+      rot: 3.141592653589793 rad
+      pos: -89.5,107.5
+      parent: 1
+    - type: RMCPodDoor
+      id: ConferenceRoom
+  - uid: 21490
+    components:
+    - type: Transform
+      rot: 3.141592653589793 rad
+      pos: -87.5,107.5
+      parent: 1
+    - type: RMCPodDoor
+      id: ConferenceRoom
+  - uid: 21491
+    components:
+    - type: Transform
+      rot: 3.141592653589793 rad
+      pos: -88.5,107.5
+      parent: 1
+    - type: RMCPodDoor
+      id: ConferenceRoom
+  - uid: 21492
+    components:
+    - type: Transform
+      rot: 1.5707963267948966 rad
+      pos: -92.5,103.5
+      parent: 1
+    - type: RMCPodDoor
+      id: ConferenceRoom
+  - uid: 21493
+    components:
+    - type: Transform
+      rot: 1.5707963267948966 rad
+      pos: -92.5,102.5
+      parent: 1
+    - type: RMCPodDoor
+      id: ConferenceRoom
 - proto: RMCSkillPowerLoader
   entities:
   - uid: 20700
@@ -144632,6 +145097,86 @@ entities:
     components:
     - type: Transform
       pos: -63.47751,119.46098
+      parent: 1
+- proto: RMCTacticalMapTable
+  entities:
+  - uid: 21436
+    components:
+    - type: Transform
+      pos: -70.5,102.5
+      parent: 1
+  - uid: 21437
+    components:
+    - type: Transform
+      pos: -60.5,102.5
+      parent: 1
+- proto: RMCTargetHuman
+  entities:
+  - uid: 21344
+    components:
+    - type: Transform
+      pos: 65.5,-1.5
+      parent: 1
+  - uid: 21345
+    components:
+    - type: Transform
+      pos: 67.5,-1.5
+      parent: 1
+  - uid: 21346
+    components:
+    - type: Transform
+      pos: 69.5,-1.5
+      parent: 1
+  - uid: 21347
+    components:
+    - type: Transform
+      pos: 71.5,-1.5
+      parent: 1
+  - uid: 21348
+    components:
+    - type: Transform
+      pos: 71.5,0.5
+      parent: 1
+  - uid: 21349
+    components:
+    - type: Transform
+      pos: 69.5,0.5
+      parent: 1
+  - uid: 21350
+    components:
+    - type: Transform
+      pos: 67.5,0.5
+      parent: 1
+  - uid: 21351
+    components:
+    - type: Transform
+      pos: 65.5,0.5
+      parent: 1
+  - uid: 21352
+    components:
+    - type: Transform
+      pos: 66.5,2.5
+      parent: 1
+  - uid: 21353
+    components:
+    - type: Transform
+      pos: 66.5,-3.5
+      parent: 1
+  - uid: 21354
+    components:
+    - type: Transform
+      pos: 70.5,-3.5
+      parent: 1
+  - uid: 21355
+    components:
+    - type: Transform
+      pos: 70.5,2.5
+      parent: 1
+  - uid: 21356
+    components:
+    - type: Transform
+      rot: 3.141592653589793 rad
+      pos: 60.5,1.5
       parent: 1
 - proto: RMCToolboxMechanicalFilled
   entities:
@@ -147284,73 +147829,12 @@ entities:
     - type: Transform
       pos: 87.5,15.5
       parent: 1
-- proto: TargetHuman
+- proto: TomatoSeeds
   entities:
-  - uid: 21344
+  - uid: 21449
     components:
     - type: Transform
-      pos: 65.5,-1.5
-      parent: 1
-  - uid: 21345
-    components:
-    - type: Transform
-      pos: 67.5,-1.5
-      parent: 1
-  - uid: 21346
-    components:
-    - type: Transform
-      pos: 69.5,-1.5
-      parent: 1
-  - uid: 21347
-    components:
-    - type: Transform
-      pos: 71.5,-1.5
-      parent: 1
-  - uid: 21348
-    components:
-    - type: Transform
-      pos: 71.5,0.5
-      parent: 1
-  - uid: 21349
-    components:
-    - type: Transform
-      pos: 69.5,0.5
-      parent: 1
-  - uid: 21350
-    components:
-    - type: Transform
-      pos: 67.5,0.5
-      parent: 1
-  - uid: 21351
-    components:
-    - type: Transform
-      pos: 65.5,0.5
-      parent: 1
-  - uid: 21352
-    components:
-    - type: Transform
-      pos: 66.5,2.5
-      parent: 1
-  - uid: 21353
-    components:
-    - type: Transform
-      pos: 66.5,-3.5
-      parent: 1
-  - uid: 21354
-    components:
-    - type: Transform
-      pos: 70.5,-3.5
-      parent: 1
-  - uid: 21355
-    components:
-    - type: Transform
-      pos: 70.5,2.5
-      parent: 1
-  - uid: 21356
-    components:
-    - type: Transform
-      rot: 3.141592653589793 rad
-      pos: 60.5,1.5
+      pos: -118.5,90.5
       parent: 1
 - proto: TrashBag
   entities:
@@ -147988,6 +148472,28 @@ entities:
     - type: Transform
       pos: -110.5,114.5
       parent: 1
+- proto: WeedSpray
+  entities:
+  - uid: 21451
+    components:
+    - type: Transform
+      pos: -116.5,87.5
+      parent: 1
+  - uid: 21452
+    components:
+    - type: Transform
+      pos: -116.5,87.5
+      parent: 1
+  - uid: 21453
+    components:
+    - type: Transform
+      pos: -117.5,87.5
+      parent: 1
+  - uid: 21454
+    components:
+    - type: Transform
+      pos: -117.5,87.5
+      parent: 1
 - proto: WetFloorSign
   entities:
   - uid: 21430
@@ -148009,6 +148515,18 @@ entities:
     components:
     - type: Transform
       pos: -67.14993,-15.580051
+      parent: 1
+- proto: WheatSeeds
+  entities:
+  - uid: 21447
+    components:
+    - type: Transform
+      pos: -115.5,87.5
+      parent: 1
+  - uid: 21448
+    components:
+    - type: Transform
+      pos: -115.5,87.5
       parent: 1
 - proto: Zipties
   entities:
