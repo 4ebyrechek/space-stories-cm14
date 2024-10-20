@@ -137,6 +137,16 @@ public sealed class XenoLeapSystem : EntitySystem
 
         _physics.ApplyLinearImpulse(xeno, impulse, body: physics);
         _physics.SetBodyStatus(xeno, physics, BodyStatus.InAir);
+
+        //Handle close-range or same-tile leaps
+        foreach (var ent in _physics.GetContactingEntities(xeno.Owner, physics))
+        {
+            if (_hive.FromSameHive(xeno.Owner, ent))
+                continue;
+
+            if (ApplyLeapingHitEffects((xeno, leaping), ent))
+                return;
+        }
     }
 
     private void OnXenoLeapingDoHit(Entity<XenoLeapingComponent> xeno, ref StartCollideEvent args)
@@ -212,6 +222,69 @@ public sealed class XenoLeapSystem : EntitySystem
     private void OnXenoLeapingPullAttempt(Entity<XenoLeapingComponent> ent, ref PullAttemptEvent args)
     {
         args.Cancelled = true;
+    }
+
+    private bool IsValidLeapHit(Entity<XenoLeapingComponent> xeno, EntityUid target)
+    {
+        if (xeno.Comp.KnockedDown)
+            return false;
+
+        if (!HasComp<MobStateComponent>(target) || _mobState.IsIncapacitated(target))
+            return false;
+
+        if (_standing.IsDown(target))
+            return false;
+
+        if (HasComp<LeapIncapacitatedComponent>(target))
+            return false;
+
+        return true;
+    }
+
+    private bool ApplyLeapingHitEffects(Entity<XenoLeapingComponent> xeno, EntityUid target)
+    {
+        if(!IsValidLeapHit(xeno, target))
+            return false;
+
+        if (_hive.FromSameHive(xeno.Owner, target))
+        {
+            StopLeap(xeno);
+            return true;
+        }
+
+        xeno.Comp.KnockedDown = true;
+        Dirty(xeno);
+
+        if (_physicsQuery.TryGetComponent(xeno, out var physics))
+        {
+            _physics.SetBodyStatus(xeno, physics, BodyStatus.OnGround);
+
+            if (physics.Awake)
+                _broadphase.RegenerateContacts(xeno, physics);
+        }
+
+        if (!xeno.Comp.KnockdownRequiresInvisibility || HasComp<XenoActiveInvisibleComponent>(xeno))
+        {
+            var victim = EnsureComp<LeapIncapacitatedComponent>(target);
+            victim.RecoverAt = _timing.CurTime + xeno.Comp.ParalyzeTime;
+            Dirty(target, victim);
+
+            if (_net.IsServer)
+                _stun.TryParalyze(target, xeno.Comp.ParalyzeTime, true);
+        }
+
+        _stun.TryStun(xeno, xeno.Comp.MoveDelayTime, true);
+        var ev = new XenoLeapHitEvent(xeno, target);
+        RaiseLocalEvent(xeno, ref ev);
+
+        if (!xeno.Comp.PlayedSound && _net.IsServer)
+        {
+            xeno.Comp.PlayedSound = true;
+            _audio.PlayPvs(xeno.Comp.LeapSound, xeno);
+        }
+
+        StopLeap(xeno);
+        return true;
     }
 
     private void StopLeap(Entity<XenoLeapingComponent> leaping)
