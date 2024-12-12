@@ -32,3 +32,7 @@ ent-ActionXenoParasiteReserve = Установить резерв лицехва
     .desc = Устанавливает резервы паразитов. Наблюдатели не могут присоединиться в качестве хранимого паразита, если количество хранимых паразитов меньше или равно вашему резерву.
 ent-ActionXenoManageHive = Управлять Ульем
     .desc = { ent-ActionXenoBase.desc }
+ent-ActionXenoDodge = Уклонение (200)
+    .desc = Получает прибавку к скорости на 7 секунд. Ваша скорость удваивается рядом со стоящими врагами.
+ent-ActionXenoBurrow = Закопаться
+    .desc = { ent-ActionXenoBase.desc }

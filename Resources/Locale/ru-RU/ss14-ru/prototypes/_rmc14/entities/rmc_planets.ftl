@@ -10,3 +10,7 @@ ent-RMCPlanetTrijent = Дамба Триджент
     .desc = { "" }
 ent-RMCPlanetVaradero = Новый Варадеро
     .desc = { "" }
+ent-RMCPlanetKutjevo = НПЗ Кутьево
+    .desc = { "" }
+ent-RMCPlanetChances = LV-522 Претензия Шанса
+    .desc = { "" }

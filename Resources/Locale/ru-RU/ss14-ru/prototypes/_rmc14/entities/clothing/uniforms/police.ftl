@@ -1,4 +1,4 @@
-ent-CMJumpsuitMP = униформа члена парламента
+ent-CMJumpsuitMP = униформа ВП
     .desc = Стандартная форма морского пехотинца.
 ent-CMJumpsuitMPBlack = черная форма ВП
     .desc = Форма ВП стандартного образца.

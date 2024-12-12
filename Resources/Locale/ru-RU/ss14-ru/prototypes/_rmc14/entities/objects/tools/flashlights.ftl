@@ -1,5 +1,10 @@
 ent-RMCFlashlightBase = { ent-BaseItem }
     .desc = { ent-BaseItem.desc }
+ent-RMCBoxFlashlightsEmpty = коробка с фонариками
+    .desc = Коробка фонариков, чтобы скрасить ваш день!
+ent-RMCBoxFlashlights = { ent-RMCBoxFlashlightsEmpty }
+    .suffix = Заполненный
+    .desc = { ent-RMCBoxFlashlightsEmpty.desc }
 ent-RMCFlashlight = фонарик
     .desc = Ручной аварийный фонарь.
 ent-RMCFlashlightPen = перочинный фонарик

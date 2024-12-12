@@ -1,3 +1,5 @@
+ent-CMBaseWeaponRifleNoDualWieldPenalty = { ent-CMBaseWeaponGun }
+    .desc = { ent-CMBaseWeaponGun.desc }
 ent-CMBaseWeaponRifle = { ent-CMBaseWeaponGun }
     .desc = { ent-CMBaseWeaponGun.desc }
 ent-CMMagazineRifleBase = { ent-BaseMagazineRifle }

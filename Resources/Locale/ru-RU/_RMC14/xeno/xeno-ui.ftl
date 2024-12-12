@@ -8,6 +8,7 @@ xeno-ui-default-area-name = Неизвестный
 xeno-ui-name-tunnel-title = Имя Тунелля
 xeno-ui-name-tunnel-submit-text = Применить Имя
 xeno-ui-rename-tunnel-verb = Переименовть Туннель
+xeno-ui-enter-tunnel-verb = Войти В Туннель
 xeno-ui-select-destination-tunnel-title = Выберите Туннель Назначения
 xeno-ui-select-destination-tunnel-submit-text = Выберите Туннель
 cm-ui-cm-actions = Действия СМ
