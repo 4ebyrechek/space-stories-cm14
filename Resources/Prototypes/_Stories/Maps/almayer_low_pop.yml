@@ -3,9 +3,10 @@
 # If you wish for this file to be public you may recreate them yourself and PR it to the repo.
 - type: gameMap
   id: AlmayerLowPop
-  mapName: Almayer (0-50)
+  mapName: Almayer (0-25)
   mapPath: /Maps/_RMC14/almayer.yml
   minPlayers: 0
+  maxPlayers: 25
   maxRandomOffset: 0
   randomRotation: false
   fallback: false
