@@ -7,7 +7,7 @@
   requirements:
   - !type:DepartmentTimeRequirement
     department: CMCommand
-    time: 36000 # 10 hours
+    time: 72000 # 20 hours # Stories-RolePlay
   ranks:
     RMCRankCaptain: []
   weight: 5
@@ -16,7 +16,6 @@
   requireAdminNotify: true
   joinNotifyCrew: true
   supervisors: cm-job-supervisors-co
-  whitelisted: true # Stories-RolePlay
   accessGroups:
   - MarineMain
   minimapIcon:
