@@ -14,7 +14,6 @@ role_ban_default_severity = "minor"
 department_ban_default_severity = "minor"
 server_ban_default_severity = "medium"
 server_ban_hwid_ban_default = false
-explosion_min_intensity = -1
 
 [ahelp]
 admin_prefix = true
