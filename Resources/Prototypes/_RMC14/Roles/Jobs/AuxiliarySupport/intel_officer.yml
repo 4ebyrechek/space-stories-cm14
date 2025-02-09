@@ -44,6 +44,10 @@
       prefix: cm-job-prefix-intel
     - type: CMVendorUser # Stories-Partners
     - type: ViewIntelObjectives
+    - type: AssignSquad
+      whitelist:
+        tags:
+        - RMCSquadEcho
 
 - type: startingGear
   id: CMGearIntelOfficer

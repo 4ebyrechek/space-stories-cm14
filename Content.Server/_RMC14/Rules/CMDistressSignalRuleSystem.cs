@@ -592,7 +592,7 @@ public sealed class CMDistressSignalRuleSystem : GameRuleSystem<CMDistressSignal
 
         foreach (var id in rule.Comp.ExtraSquadIds)
         {
-            // Spawn(id);
+            Spawn(id);
         }
     }
 
