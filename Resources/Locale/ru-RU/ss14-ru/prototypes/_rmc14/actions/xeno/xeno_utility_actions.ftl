@@ -1,7 +1,9 @@
 ent-ActionXenoTransferPlasma = Передать Плазму (50)
     .desc = Передать плазму ближайшему ксеноморфу
 ent-ActionXenoHealerDroneTransferPlasma = Передать плазму (100)
-    .desc = Передать плазму ближайшему ксенониду.
+    .desc = Передать плазму ближайшему ксеноморфу.
+ent-ActionXenoTransferPlasmaHivelord = Передать плазму (200)
+    .desc = Передать плазму ближайшему ксеноморфу.
 ent-ActionXenoResinSurge = Смоляной Всплеск (75)
     .desc = Ускорьте рост растений, создайте временные стены или сильно укрепите существующие.
 ent-ActionXenoRetrieve = Извлечь (180 плазмы, 100 энергии)
