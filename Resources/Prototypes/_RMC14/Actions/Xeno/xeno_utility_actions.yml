@@ -213,6 +213,20 @@
       sprite: _RMC14/Actions/xeno_actions.rsi
       state: screech
     event: !type:XenoSacrificeHealActionEvent
+    range: 1.5
+
+- type: entity
+  parent: ActionXenoBase
+  id: ActionXenoTailFountain
+  name: Tail Fountain
+  description: Extinguishes fire from a nearby ally or foe. Uses up your melee attack.
+  components:
+  - type: EntityTargetAction
+    itemIconStyle: NoItem
+    icon:
+      sprite: _RMC14/Actions/xeno_actions.rsi
+      state: prae_tail_fountain
+    event: !type:XenoTailFountainActionEvent
     range: 2
 
 - type: entity

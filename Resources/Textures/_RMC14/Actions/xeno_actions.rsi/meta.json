@@ -507,6 +507,27 @@
     },
     {
       "name": "soak"
+    },
+    {
+      "name": "place_resin"
+    },
+    {
+      "name": "tail_attack_acid"
+    },
+    {
+      "name": "tremor"
+    },
+    {
+      "name": "xeno_tacmap"
+    },
+    {
+      "name": "gardener_plant_pick"
+    },
+    {
+      "name": "prae_tail_fountain"
+    },
+    {
+      "name": "rav_empower"
     }
   ]
 }
