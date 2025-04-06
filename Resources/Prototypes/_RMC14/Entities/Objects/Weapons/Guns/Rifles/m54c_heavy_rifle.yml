@@ -150,7 +150,7 @@
     proto: CMCartridgeRifle10x24mmHT
     capacity: 200
   - type: Sprite
-    sprite: _RMC14/Objects/Weapons/Guns/Ammunition/Magazines/m54ce2/desert.rsi
+    sprite: _Stories/Objects/Weapons/Guns/Ammunition/Magazines/m41ae2.rsi # Stories-Parity
     layers:
     - state: base
       map: [ "enum.GunVisualLayers.Base" ]
@@ -196,7 +196,7 @@
     proto: CMCartridgeRifle10x24mmAP
     capacity: 300
   - type: Sprite
-    sprite: _RMC14/Objects/Weapons/Guns/Ammunition/Magazines/m54ce2/desert.rsi
+    sprite: _Stories/Objects/Weapons/Guns/Ammunition/Magazines/m41ae2.rsi # Stories-Parity
     layers:
     - state: base
       map: [ "enum.GunVisualLayers.Base" ]
