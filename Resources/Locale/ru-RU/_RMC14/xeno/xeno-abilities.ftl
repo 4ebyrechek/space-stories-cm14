@@ -300,6 +300,19 @@ rmc-xeno-produce-eggs-start = Начинаем формировать яйца.
 # Eggsac Пассивный
 rmc-xeno-sustain-egg-decaying = Мы можем поддерживать только { $max } яиц из сорняков улья! Наша самая старая яйцеклетка быстро разлагается.
 rmc-xeno-sustain-death = { CAPITALIZE($xeno) } агонит, когда его мешок для яиц превращается в месиво из кислоты!
+# Apprehend
+rmc-xeno-apprehend-activate = Наш следующий удар замедлит!
+rmc-xeno-apprehend-expire = Мы ждали слишком долго, наш удар больше не замедлит врагов!
+# Rage
+rmc-xeno-rage-lock = Мы чувствуем эйфорический прилив, достигнув максимальной ярости! Мы ЗАБЛОКИРОВАНЫ на максимальной Ярости!
+rmc-xeno-rage-expire = Наши надпочечники спазмируют. Мы не можем набирать ярость в течение { $cooldown } секунд.
+rmc-xeno-rage-examine = { CAPITALIZE(SUBJECT($xeno)) } { CONJUGATE-BE($xeno) } имеет { $amount }/{ $max } стаков ярости.
+# Eviscerate
+rmc-xeno-eviscerate-fail = Мы не можем использовать "Потрошение" с 0 стаков ярости!
+rmc-xeno-eviscerate-windup-self = Мы готовимся к мощному удару!
+rmc-xeno-eviscerate-windup = { $xeno } готовится к мощному удару!
+rmc-xeno-eviscerate-windup-small-self = Мы готовимся к удару!
+rmc-xeno-eviscerate-windup-small = { $xeno } готовится к удару!
 rmc-xeno-ravager-super-empower-fade = Наше свечение исчезает, сила покидает нашу форму!
 rmc-xeno-defensive-shield-activate-self = Мы прижимаемся к земле и укрепляем свою защиту!
 cm-xeno-plasma-transferred-to-self = { $target } передал вам { $plasma } плазмы. Теперь у вас есть { $total }

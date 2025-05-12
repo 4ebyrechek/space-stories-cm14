@@ -7,3 +7,5 @@ ent-RMCShoesJackboots = сапоги
 ent-RMCShoesJackbootsFilled = { ent-RMCItemSlotM5Bayonet }
     .suffix = Заполненный
     .desc = { ent-RMCItemSlotM5Bayonet.desc }
+ent-RMCShoesPrisoner = обувь для заключенных
+    .desc = Пара оранжевых ботинок, которые носят заключенные в соответствии с морскими законами.

@@ -2,6 +2,7 @@ ent-CMHeadBeret = берет
     .desc = Не защищает голову от пуль.
 ent-RMCHeadBeret = { ent-CMHeadBeret }
     .desc = { ent-CMHeadBeret.desc }
+    .suffix = Камо
 ent-CMHeadBeretRed = красный берет
     .desc = { ent-CMHeadBeret.desc }
 ent-CMHeadBeretTan = бежевый берет

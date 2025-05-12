@@ -123,6 +123,7 @@ cm-chatsan-replacement-orbital-bombardment = огненое небо
 cm-chatsan-word-engie = инж
 cm-chatsan-replacement-engie = носитель строитель
 cm-chatsan-word-engineer = инженер
+cm-chatsan-replacement-combat-technician = носитель строитель
 cm-chatsan-replacement-engineer = носитель строитель
 cm-chatsan-word-comtech = комтех
 cm-chatsan-replacement-comtech = носитель строитель

@@ -18,3 +18,5 @@ rmc-dogtags-unknown = неизвестно
 rmc-dogtags-info-joined-name = жетон
 rmc-dogtags-info-joined-desc = Жетоны павших морских пехотинцев.
 rmc-unstrippable = Ты не можешь снять { $item } с { $owner }!
+rmc-no-visors-to-swap = Нет доступных визоров для переключения!
+rmc-visor-down = { CAPITALIZE(THE($visor)) } опущен.

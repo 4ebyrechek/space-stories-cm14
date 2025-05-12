@@ -14,5 +14,7 @@ ent-RMCHeadsetDistressPMCDirector = гарнитура ЧВК
     .suffix = Директор
 ent-RMCHeadsetDistressDukes = гарнитура герцогская дюжина
     .desc = Специальная гарнитура, используемая небольшими группами подготовленных оперативников. Или террористами.
+ent-RMCHeadsetDistressDukesLeader = { ent-RMCHeadsetDistressDukes }
+    .desc = { ent-RMCHeadsetDistressDukes.desc }
 ent-RMCHeadsetDistressFreelancer = гарнитура фрилансера
     .desc = Специальная гарнитура, используемая небольшими группами подготовленных оперативников. Или террористами.

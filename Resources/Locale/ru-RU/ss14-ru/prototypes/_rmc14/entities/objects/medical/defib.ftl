@@ -9,3 +9,5 @@ ent-CMDefibrillatorEmpty = { ent-CMDefibrillator }
 ent-CMDefibrillatorInfinite = { ent-CMBaseDefibrillator }
     .suffix = КМ14, Бесконечный
     .desc = { ent-CMBaseDefibrillator.desc }
+ent-RMCDefibrillatorCompact = компактный дефибриллятор
+    .desc = Этот дефибриллятор имеет вдвое меньшую емкость заряда по сравнению со стандартным аварийным дефибриллятором, но при этом может поместиться в кармане.
