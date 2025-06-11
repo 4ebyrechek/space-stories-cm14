@@ -117,7 +117,7 @@ entities:
   - uid: 1
     components:
     - type: MetaData
-      name: Fax Responder Outpost
+      name: Аванпост Ответчиков Факсов
     - type: Transform
     - type: Map
       mapPaused: True

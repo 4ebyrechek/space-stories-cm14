@@ -12688,14 +12688,14 @@ entities:
   - uid: 2694
     components:
     - type: MetaData
-      name: Hangar Bay
+      name: 'СП1: Ангарная Палуба'
     - type: Transform
       pos: 61.5,-0.5
       parent: 2
   - uid: 2695
     components:
     - type: MetaData
-      name: Aft Hangar Bay
+      name: 'СП2: Кормовая Ангарная Палуба'
     - type: Transform
       pos: 61.5,-30.5
       parent: 2

@@ -14,7 +14,7 @@ entities:
   - uid: 1
     components:
     - type: MetaData
-      name: Спасательная Капсула (Юг)
+      name: Спасательная Капсула — Юг
     - type: Transform
       pos: -0.515625,-0.5625
       parent: invalid

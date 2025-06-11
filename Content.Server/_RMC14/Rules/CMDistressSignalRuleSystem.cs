@@ -748,50 +748,6 @@ public sealed class CMDistressSignalRuleSystem : GameRuleSystem<CMDistressSignal
                 }
             }
 
-            if (spawnedDropships)
-                return;
-
-            // don't open shitcode inside
-            spawnedDropships = true;
-            var dropshipMap = _mapManager.CreateMap();
-            var dropshipPoints = EntityQueryEnumerator<DropshipDestinationComponent, TransformComponent>();
-            var ships = new[] { new ResPath("/Maps/_RMC14/alamo.yml"), new ResPath("/Maps/_RMC14/normandy.yml") };
-            var shipIndex = 0;
-            while (dropshipPoints.MoveNext(out var destinationId, out _, out var destTransform))
-            {
-                if (_mapSystem.TryGetMap(destTransform.MapID, out var destinationMapId) &&
-                    comp.XenoMap == destinationMapId)
-                {
-                    continue;
-                }
-
-                if (!_mapLoader.TryLoadGrid(dropshipMap, ships[shipIndex], out var shipGrids, offset: new Vector2(shipIndex * 100, shipIndex * 100)))
-                {
-                    shipIndex++;
-
-                    if (shipIndex >= ships.Length)
-                        shipIndex = 0;
-
-                    continue;
-                }
-
-                shipIndex++;
-                if (shipIndex >= ships.Length)
-                    shipIndex = 0;
-
-                var computers = EntityQueryEnumerator<DropshipNavigationComputerComponent, TransformComponent>();
-                while (computers.MoveNext(out var computerId, out var computer, out var xform))
-                {
-                    if (xform.GridUid != shipGrids.Value)
-                        continue;
-
-                    if (!_dropship.FlyTo((computerId, computer), destinationId, null, startupTime: 1f, hyperspaceTime: 1f))
-                        continue;
-
-                    break;
-                }
-            }
-
             var marineFactions = EntityQueryEnumerator<MarineIFFComponent>();
             while (marineFactions.MoveNext(out var iffId, out _))
             {

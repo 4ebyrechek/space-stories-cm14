@@ -17,7 +17,7 @@ entities:
   - uid: 1
     components:
     - type: MetaData
-      name: Спасательная Капсула (Восток)
+      name: Спасательная Капсула — Восток
     - type: Transform
       pos: -0.515625,-0.5625
       parent: invalid
