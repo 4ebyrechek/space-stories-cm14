@@ -123,7 +123,9 @@
   - type: FixedIdentity
     name: cm-job-name-xeno-parasite
   - type: AutoClimbBlocked # Stories-AutoClimb
-  
+  - type: TTS # Stories-TTS
+    voice: ziggs
+
 - type: entity
   parent: CMXenoParasiteBase
   id: CMXenoParasite

@@ -55,13 +55,6 @@ public sealed partial class AudioTab : Control
             SliderVolumeInterface,
             scale: ContentAudioSystem.InterfaceMultiplier);
 
-        // Stories-TTS-Start
-        Control.AddOptionPercentSlider(
-            SCCVars.TTSVolume,
-            SliderVolumeTtsVolume,
-            scale: ContentAudioSystem.TtsMultiplier);
-        // Stories-TTS-End
-
         // RMC14
         Control.AddOptionPercentSlider(
             RMCCVars.VolumeGainCassettes,

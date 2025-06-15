@@ -21,6 +21,9 @@ using Robust.Shared.Prototypes;
 using Robust.Shared.Random;
 using Robust.Shared.Replays;
 using Robust.Shared.Utility;
+using Content.Server._Stories.TTS;
+using Content.Shared._Stories.TTS;
+using Robust.Shared.Enums;
 
 namespace Content.Server.Radio.EntitySystems;
 
@@ -37,6 +40,7 @@ public sealed class RadioSystem : EntitySystem
     [Dependency] private readonly ChatSystem _chat = default!;
     [Dependency] private readonly SharedAudioSystem _audio = default!; // RMC14
     [Dependency] private readonly IChatManager _chatManager = default!; // RMC14
+    [Dependency] private readonly TTSSystem _tts = default!; // Stories-TTS
 
     // set used to prevent radio feedback loops.
     private readonly HashSet<string> _messages = new();
@@ -73,8 +77,36 @@ public sealed class RadioSystem : EntitySystem
 
     private void OnIntrinsicReceive(EntityUid uid, IntrinsicRadioReceiverComponent component, ref RadioReceiveEvent args)
     {
-        if (TryComp(uid, out ActorComponent? actor))
-            _netMan.ServerSendMessage(args.ChatMsg, actor.PlayerSession.Channel);
+        if (!TryComp(uid, out ActorComponent? actor))
+            return;
+
+        var playerSession = actor.PlayerSession;
+        if (playerSession.Status != SessionStatus.InGame)
+            return;
+
+        _netMan.ServerSendMessage(args.ChatMsg, playerSession.Channel);
+
+        if (Exists(args.MessageSource))
+        {
+            HandleRadioTts(args.MessageSource, args.Message, playerSession);
+        }
+    }
+
+    private async void HandleRadioTts(EntityUid sourceUid, string message, ICommonSession playerSession)
+    {
+        if (!TryComp<TTSComponent>(sourceUid, out var tts) || string.IsNullOrEmpty(tts.VoicePrototypeId) ||
+            !_prototype.TryIndex<TTSVoicePrototype>(tts.VoicePrototypeId, out var protoVoice))
+        {
+            return;
+        }
+
+        var soundData = await _tts.GenerateTTS(message, protoVoice.Speaker, isWhisper: false);
+
+        if (soundData == null || playerSession.Status != SessionStatus.InGame)
+            return;
+
+        var ttsEvent = new PlayTTSEvent(soundData, sourceUid: null, isWhisper: true, originalSourceUid: GetNetEntity(sourceUid));
+        RaiseNetworkEvent(ttsEvent, playerSession);
     }
 
     /// <summary>

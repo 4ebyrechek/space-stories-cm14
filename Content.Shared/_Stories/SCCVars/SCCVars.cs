@@ -20,6 +20,12 @@ public sealed class SCCVars
         CVarDef.Create("tts.enabled", false, CVar.SERVER | CVar.REPLICATED | CVar.ARCHIVE);
 
     /// <summary>
+    /// Whether the TTS system is enabled on the client.
+    /// </summary>
+    public static readonly CVarDef<bool> TTSEnabledClient =
+        CVarDef.Create("tts.enabled_client", true, CVar.CLIENTONLY | CVar.ARCHIVE);
+
+    /// <summary>
     /// URL of the TTS server API.
     /// </summary>
     public static readonly CVarDef<string> TTSApiUrl =
@@ -38,10 +44,28 @@ public sealed class SCCVars
         CVarDef.Create("tts.api_timeout", 5, CVar.SERVERONLY | CVar.ARCHIVE);
 
     /// <summary>
-    /// Default volume setting of TTS sound
+    /// Default volume setting of TTS sound for marines
     /// </summary>
-    public static readonly CVarDef<float> TTSVolume =
-        CVarDef.Create("tts.volume", 0f, CVar.CLIENTONLY | CVar.ARCHIVE);
+    public static readonly CVarDef<float> TTSVolumeMarines =
+        CVarDef.Create("tts.volume_marines", 1.0f, CVar.CLIENTONLY | CVar.ARCHIVE);
+
+    /// <summary>
+    /// Default volume setting of TTS sound for xenos
+    /// </summary>
+    public static readonly CVarDef<float> TTSVolumeXenos =
+        CVarDef.Create("tts.volume_xenos", 1.0f, CVar.CLIENTONLY | CVar.ARCHIVE);
+
+    /// <summary>
+    /// Default volume setting of TTS sound for radio
+    /// </summary>
+    public static readonly CVarDef<float> TTSVolumeRadio =
+        CVarDef.Create("tts.volume_radio", 0.5f, CVar.CLIENTONLY | CVar.ARCHIVE);
+
+    /// <summary>
+    /// Default volume setting of TTS sound for others
+    /// </summary>
+    public static readonly CVarDef<float> TTSVolumeOther =
+        CVarDef.Create("tts.volume_other", 1.0f, CVar.CLIENTONLY | CVar.ARCHIVE);
 
     /// <summary>
     /// Count of in-memory cached tts voice lines.

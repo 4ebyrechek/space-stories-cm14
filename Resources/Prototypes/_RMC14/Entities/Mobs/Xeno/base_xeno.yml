@@ -375,6 +375,8 @@
     whitelist:
       components:
       - Marine
+  - type: TTS # Stories-TTS
+    voice: clinkz_dota_2
 
 - type: entity
   abstract: true

@@ -1,3 +1,5 @@
+using System.Collections.Generic;
+using System.Threading.Tasks;
 using Content.Server.Chat.Systems;
 using Content.Server.Emp;
 using Content.Server.Radio.Components;
@@ -7,6 +9,11 @@ using Content.Shared.Radio.Components;
 using Content.Shared.Radio.EntitySystems;
 using Robust.Shared.Network;
 using Robust.Shared.Player;
+using Robust.Shared.Enums;
+using Content.Server._Stories.TTS;
+using Content.Shared._Stories.TTS;
+using Content.Shared.GameTicking;
+using Robust.Shared.Prototypes;
 
 namespace Content.Server.Radio.EntitySystems;
 
@@ -14,16 +21,27 @@ public sealed class HeadsetSystem : SharedHeadsetSystem
 {
     [Dependency] private readonly INetManager _netMan = default!;
     [Dependency] private readonly RadioSystem _radio = default!;
+    [Dependency] private readonly TTSSystem _ttsSystem = default!;
+    [Dependency] private readonly IPrototypeManager _prototypeManager = default!;
+
+    private readonly Dictionary<string, Task<byte[]?>> _radioTtsCache = new();
+    private readonly Queue<string> _radioTtsCacheQueue = new();
+    private const int RadioTtsCacheSize = 10;
 
     public override void Initialize()
     {
         base.Initialize();
         SubscribeLocalEvent<HeadsetComponent, RadioReceiveEvent>(OnHeadsetReceive);
         SubscribeLocalEvent<HeadsetComponent, EncryptionChannelsChangedEvent>(OnKeysChanged);
-
         SubscribeLocalEvent<WearingHeadsetComponent, EntitySpokeEvent>(OnSpeak);
-
         SubscribeLocalEvent<HeadsetComponent, EmpPulseEvent>(OnEmpPulse);
+        SubscribeLocalEvent<RoundRestartCleanupEvent>(OnRoundRestart);
+    }
+
+    private void OnRoundRestart(RoundRestartCleanupEvent ev)
+    {
+        _radioTtsCache.Clear();
+        _radioTtsCacheQueue.Clear();
     }
 
     private void OnKeysChanged(EntityUid uid, HeadsetComponent component, EncryptionChannelsChangedEvent args)
@@ -99,8 +117,65 @@ public sealed class HeadsetSystem : SharedHeadsetSystem
 
     private void OnHeadsetReceive(EntityUid uid, HeadsetComponent component, ref RadioReceiveEvent args)
     {
-        if (TryComp(Transform(uid).ParentUid, out ActorComponent? actor))
-            _netMan.ServerSendMessage(args.ChatMsg, actor.PlayerSession.Channel);
+        if (!TryComp(Transform(uid).ParentUid, out ActorComponent? actor))
+            return;
+
+        var playerSession = actor.PlayerSession;
+        if (playerSession.Status != SessionStatus.InGame)
+            return;
+
+        // Send the text message immediately
+        _netMan.ServerSendMessage(args.ChatMsg, playerSession.Channel);
+
+        // Kick off the async TTS generation without blocking the event handler
+        if (Exists(args.MessageSource))
+        {
+            HandleRadioTts(args.MessageSource, args.Message, playerSession);
+        }
+    }
+
+    private async void HandleRadioTts(EntityUid sourceUid, string message, ICommonSession playerSession)
+    {
+        if (!TryComp<TTSComponent>(sourceUid, out var tts) || string.IsNullOrEmpty(tts.VoicePrototypeId) ||
+            !_prototypeManager.TryIndex<TTSVoicePrototype>(tts.VoicePrototypeId, out var protoVoice))
+        {
+            return;
+        }
+
+        var cacheKey = $"{protoVoice.ID}:{message}";
+        Task<byte[]?>? generationTask;
+
+        lock (_radioTtsCache)
+        {
+            if (!_radioTtsCache.TryGetValue(cacheKey, out generationTask))
+            {
+                // Not in cache, so we are the first one to request it.
+                // Create the task and add it to the cache.
+                generationTask = _ttsSystem.GenerateTTS(message, protoVoice.Speaker, isWhisper: false);
+                _radioTtsCache.Add(cacheKey, generationTask);
+                _radioTtsCacheQueue.Enqueue(cacheKey);
+
+                // Evict old entries if cache is too large
+                if (_radioTtsCacheQueue.Count > RadioTtsCacheSize)
+                {
+                    var keyToRemove = _radioTtsCacheQueue.Dequeue();
+                    // Don't worry about the task result, just remove from dict
+                    _radioTtsCache.Remove(keyToRemove);
+                }
+            }
+        }
+
+        // Now everyone (including the first requester) awaits the same task.
+        var soundData = await generationTask;
+
+        // After await, we MUST re-validate the player's connection, as they might have disconnected.
+        if (soundData == null || playerSession.Status != SessionStatus.InGame)
+            return;
+
+        // Play the sound as a "whisper" to lower its volume, making it sound like it's coming from a headset.
+        // A null source UID will make the sound play globally for the receiving client.
+        var ttsEvent = new PlayTTSEvent(soundData, sourceUid: null, isWhisper: true, originalSourceUid: GetNetEntity(sourceUid));
+        RaiseNetworkEvent(ttsEvent, playerSession);
     }
 
     private void OnEmpPulse(EntityUid uid, HeadsetComponent component, ref EmpPulseEvent args)

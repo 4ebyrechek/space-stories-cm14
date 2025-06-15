@@ -261,6 +261,8 @@
       5: rmc-xeno-fem-prime
   - type: FixedIdentity
     name: cm-job-name-xeno-queen
+  - type: TTS # Stories-TTS
+    voice: cirilla
 
 - type: entity
   parent: RMCXenoQueenBase
