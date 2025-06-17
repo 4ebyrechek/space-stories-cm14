@@ -298,6 +298,8 @@
   - type: OwOAccent
   - type: Speech
     speechSounds: Cat
+    audioParams: # Stories-TTS
+      volume: -8
 
 - type: entity
   parent: StationAiHolo

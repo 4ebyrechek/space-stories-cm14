@@ -45,6 +45,7 @@ public sealed class RadioSystem : EntitySystem
     [Dependency] private readonly SharedAudioSystem _audio = default!; // RMC14
     [Dependency] private readonly IChatManager _chatManager = default!; // RMC14
     [Dependency] private readonly TTSSystem _tts = default!; // Stories-TTS
+    [Dependency] private readonly TtsAudioProcessingSystem _ttsProcessing = default!; // Stories-TTS
     [Dependency] private readonly IConfigurationManager _cfg = default!; // Stories-TTS
 
     // set used to prevent radio feedback loops.
@@ -92,10 +93,10 @@ public sealed class RadioSystem : EntitySystem
         _netMan.ServerSendMessage(args.ChatMsg, playerSession.Channel);
 
         if (Exists(args.MessageSource))
-            TryPlayRadioTtsAsync(args.MessageSource, args.Message, playerSession);
+            TryPlayRadioTtsAsync(args.MessageSource, args.Message, args.Channel, playerSession);
     }
 
-    public async void TryPlayRadioTtsAsync(EntityUid sourceUid, string message, ICommonSession playerSession)
+    public async void TryPlayRadioTtsAsync(EntityUid sourceUid, string message, RadioChannelPrototype channel, ICommonSession playerSession)
     {
         if (!_cfg.GetCVar(SCCVars.TTSEnabled))
             return;
@@ -106,7 +107,17 @@ public sealed class RadioSystem : EntitySystem
         if (soundData == null || playerSession.Status != SessionStatus.InGame)
             return;
 
-        var ttsEvent = new PlayTTSEvent(soundData, sourceUid: null, isWhisper: true, originalSourceUid: GetNetEntity(sourceUid));
+        byte[] processedSoundData;
+        if (channel.ID == "Hivemind")
+        {
+            processedSoundData = await _ttsProcessing.ApplyXenoHivemindEffect(soundData);
+        }
+        else
+        {
+            processedSoundData = await _ttsProcessing.ApplyRadioEffect(soundData);
+        }
+
+        var ttsEvent = new PlayTTSEvent(processedSoundData, sourceUid: null, isWhisper: true, originalSourceUid: GetNetEntity(sourceUid));
         RaiseNetworkEvent(ttsEvent, playerSession);
     }
 

@@ -73,6 +73,26 @@ public sealed class SCCVars
     public static readonly CVarDef<int> TTSMaxCache =
         CVarDef.Create("tts.max_cache", 250, CVar.SERVERONLY | CVar.ARCHIVE);
 
+    /// <summary>
+    /// Enable a radio effect for TTS messages sent over radio channels.
+    /// </summary>
+    public static readonly CVarDef<bool> TTSRadioEffect =
+        CVarDef.Create("scc.tts.radio_effect_enabled", true, CVar.SERVERONLY | CVar.REPLICATED);
+
+    /// <summary>
+    /// The path to the FFmpeg executable for audio processing.
+    /// </summary>
+    public static readonly CVarDef<string> TTSFfmpegPath =
+        CVarDef.Create("scc.tts.ffmpeg_path", "", CVar.SERVERONLY);
+
+    public static readonly CVarDef<string> TTSFfmpegArguments =
+        CVarDef.Create("scc.tts.ffmpeg_arguments", "-i pipe:0 -f ogg -v quiet -filter_complex \"[0:a]highpass=f=1000,lowpass=f=500[filtered];[filtered]acrusher=level_in=1:level_out=1:bits=4:mix=0.5:mode=log[crushed];[crushed]loudnorm=I=-12:LRA=7\" pipe:1",
+            CVar.SERVERONLY);
+
+    public static readonly CVarDef<string> TTSXenoFfmpegArguments =
+        CVarDef.Create("scc.tts.xeno_ffmpeg_arguments", "-i pipe:0 -f ogg -v quiet -filter_complex \"[0:a]highpass=f=250,lowpass=f=4000,vibrato=f=0.8:d=0.3[v];[v]aecho=0.9:0.5:100|180:0.2|0.1,loudnorm=I=-20\" pipe:1",
+            CVar.SERVERONLY);
+
     /**
      * Sponsors
      */

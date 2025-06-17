@@ -86,6 +86,8 @@
   - type: Speech
     speechSounds: XenonidLarva
     allowedEmotes: [ "XenoRoar" ]
+    audioParams: # Stories-TTS
+      volume: -8
   - type: RMCSize
     size: Small
   - type: ParasiteAI

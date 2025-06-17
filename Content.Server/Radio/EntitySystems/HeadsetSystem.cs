@@ -113,7 +113,7 @@ public sealed class HeadsetSystem : SharedHeadsetSystem
 
         if (Exists(args.MessageSource))
         {
-            _radio.TryPlayRadioTtsAsync(args.MessageSource, args.Message, playerSession);
+            _radio.TryPlayRadioTtsAsync(args.MessageSource, args.Message, args.Channel, playerSession);
         }
     }
 

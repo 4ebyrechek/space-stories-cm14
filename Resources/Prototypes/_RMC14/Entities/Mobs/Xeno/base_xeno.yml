@@ -509,6 +509,8 @@
   components:
   - type: Speech
     speechSounds: Xenonid
+    audioParams: # Stories-TTS
+      volume: -8
 
 - type: entity
   abstract: true
