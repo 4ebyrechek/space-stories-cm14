@@ -17,6 +17,4 @@ rmc-ui-create-squad = Создать отряд
 rmc-ui-members = Члены: { $members }
 rmc-ui-admin = Пользовательский интерфейс администратора RMC
 rmc-ui-rejuvenate-nearby-marines = Возродить всех ближайших пехотинцев
-rmc-ui-chat-bans = Баны Чата
-rmc-ui-delay-round-end = Отложить конец раунда
 rmc-ui-add-to-squad = Добавить в отряд
