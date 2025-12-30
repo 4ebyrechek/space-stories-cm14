@@ -1,10 +1,10 @@
-ent-RMCAreaHFOffice = Office
+ent-RMCAreaHFOffice = Офис
     .desc = { ent-RMCAreaHF.desc }
-ent-RMCAreaHFEngineering = Engineering
+ent-RMCAreaHFEngineering = Инженерный отсек
     .desc = { ent-RMCAreaHF.desc }
-ent-RMCAreaHFSyntheticCloset = Synthetic Closet
+ent-RMCAreaHFSyntheticCloset = Каморка синтетика
     .desc = { ent-RMCAreaHFEngineering.desc }
-ent-RMCAreaHFAICore = AI Core
+ent-RMCAreaHFAICore = Ядро ИИ
     .desc = { ent-RMCAreaHFEngineering.desc }
-ent-RMCAreaHFHangar2 = Lower Hangar
+ent-RMCAreaHFHangar2 = Нижний ангар
     .desc = { ent-RMCAreaHFHangar.desc }

@@ -68,6 +68,7 @@ cm-xeno-weeds-source-already-here = Здесь уже есть узел смол
 # Едкая кислота
 cm-xeno-acid-not-corrodible = Вы не можете разъесть { $target }!
 cm-xeno-acid-already-corroding = На { $target } уже есть коррозийная кислота!
+rmc-xeno-acid-too-weak = { CAPITALIZE(THE($target)) } слишком прочный, чтобы его расплавила наша слабая кислота.
 rmc-xeno-acid-structure-unmeltable = Мы можем плавить только баррикады и предметы!
 # Парализующий удар
 cm-xeno-paralyzing-slash-activate = Ваш следующий удар применит нейротоксин!
@@ -126,7 +127,7 @@ cm-xeno-plasma-transferred-to-other = Вы передали { $plasma } плаз
 # Charge Spit
 cm-xeno-charge-spit = Наш следующий плевок будет сильнее.
 cm-xeno-charge-spit-expire = Наши плевки пришли в норму.
-rmc-xeno-invisibility-expire-bump = We bumped into someone and lost our invisibility!
+rmc-xeno-invisibility-expire-bump = Мы наткнулись на кого-то и потеряли свою невидимость!
 # Turn Invisible
 cm-xeno-invisibility-already-invisible = Мы уже невидимы!
 cm-xeno-invisibility-expire = Мы чувствуем, что наша невидимость закончилась!
@@ -324,22 +325,22 @@ rmc-xeno-eviscerate-windup-small = { $xeno } готовится к удару!
 # Fling
 rmc-xeno-fling-too-big = { CAPITALIZE(THE($target)) } слишком велик, чтобы мы могли его метнуть!
 # Gut
-rmc-gut-start-self = We plunge our claws into the body of this unfortunate host, starting to tear them in half!
-rmc-gut-start-others = { $user } plunges their claws into the body of { $target }, starting to tear them in half!
-rmc-gut-finish-self = We tear this pathetic host in half!!
-rmc-gut-finish-others = { $user } tears { $target } in half!!
+rmc-gut-start-self = Мы вонзаем когти в тело этого жалкого носителя, начиная разрывать его пополам!
+rmc-gut-start-others = { $user } вонзает когти в тело { $target }, начиная разрывать его пополам!
+rmc-gut-finish-self = Мы разрываем этого жалкого носителя пополам!!
+rmc-gut-finish-others = { $user } разрывает { $target } пополам!!
 # Shed Spikes
-rmc-shed-spikes = We have shed our shards and cannot gain any more for 30 seconds!
-rmc-shed-spikes-back = We can gain shards again!
+rmc-shed-spikes = Мы сбросили наши осколки и не сможем нарастить новые в течение 30 секунд!
+rmc-shed-spikes-back = Мы снова можем наращивать осколки!
 # Spike Shield
-rmc-spike-shield-self = We ruffle our bone-shard quills, forming a defensive shell!
-rmc-spike-shield-others = { $user } ruffles its bone-shard quills, forming a defensive shell!
-rmc-spike-shield-hit = { $user } sprays bone quills everywhere!
+rmc-spike-shield-self = Мы топорщим наши костяные иглы, формируя защитный панцирь!
+rmc-spike-shield-others = { $user } топорщит свои костяные иглы, формируя защитный панцирь!
+rmc-spike-shield-hit = { $user } разбрасывает костяные иглы повсюду!
 # Doomed
-rmc-doomed-fail = It's not working...
+rmc-doomed-fail = Это не сработало...
 # Destroy
-rmc-destroy-cant-reach = We don't have a clear path to that location!
-rmc-destroy-cant-area = We can't leap to that area!
+rmc-destroy-cant-reach = У нас нет прямого пути к этому месту!
+rmc-destroy-cant-area = Мы не можем прыгнуть в эту область!
 rmc-xeno-ravager-super-empower-fade = Наше свечение исчезает, сила покидает нашу форму!
 rmc-xeno-defensive-shield-activate-self = Мы прижимаемся к земле и укрепляем свою защиту!
 cm-xeno-plasma-transferred-to-self = { $target } передал вам { $plasma } плазмы. Теперь у вас есть { $total }

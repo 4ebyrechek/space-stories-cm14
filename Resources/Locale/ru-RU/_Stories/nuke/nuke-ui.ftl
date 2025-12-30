@@ -1,7 +1,6 @@
 st-nuke-ui-decryption-status =
     { $state ->
-        [ready]
-            Готово к активации.
+        [ready] Готово к активации.
         [progress]
             Идёт дешифровка:
             { $time }
@@ -11,32 +10,32 @@ st-nuke-ui-decryption-status =
     }
 st-nuke-ui-timing-status =
     { $active ->
-        [true]  Время до детонации: { $time }
+        [true] Время до детонации: { $time }
        *[false] В данный момент не активна.
     }
 st-nuke-ui-safety-toggle =
     { $enabled ->
-        [true]  Отключить защиту
+        [true] Отключить защиту
        *[false] Включить защиту
     }
 st-nuke-ui-command-lockout-toggle =
     { $enabled ->
-        [true]  Выключить блокировку
+        [true] Выключить блокировку
        *[false] Включить блокировку
     }
 st-nuke-ui-anchor-toggle =
     { $enabled ->
-        [true]  Открепить
+        [true] Открепить
        *[false] Закрепить
     }
 st-nuke-ui-decryption-toggle =
     { $enabled ->
-        [true]  Остановить дешифровку
+        [true] Остановить дешифровку
        *[false] Запустить дешифровку
     }
 st-nuke-ui-nuke-toggle =
     { $enabled ->
-        [true]  Отменить фаер-шоу
+        [true] Отменить фаер-шоу
        *[false] Инициировать фаер-шоу
     }
 st-nuke-window-title = Blockbuster LAFDEDE

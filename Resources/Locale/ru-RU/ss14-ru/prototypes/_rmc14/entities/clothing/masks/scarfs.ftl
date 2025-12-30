@@ -116,3 +116,7 @@ ent-RMCMaskNeckerchiefWhite = { ent-RMCMaskNeckerchiefAlpha }
     .desc = { ent-RMCMaskNeckerchiefAlpha.desc }
 ent-RMCMaskNeckerchiefWhiteDown = шейный платок
     .desc = { ent-RMCBaseScarfDown.desc }
+ent-RMCMaskNeckerchiefRed = шейный платок
+    .desc = Простая ткань, которую носят на шее. Можно носить свободно или затянуть потуже.
+ent-RMCMaskNeckerchiefRedDown = шейный платок
+    .desc = { ent-RMCBaseScarfDown.desc }

@@ -1,3 +1,5 @@
+ent-RMCBaseBioSuit = { ent-RMCBaseArmor }
+    .desc = { ent-RMCBaseArmor.desc }
 ent-RMCSuitBioGeneral = биокостюм
     .desc = Костюм, защищающий от биологического заражения.
     .suffix = Стандартный, RMC

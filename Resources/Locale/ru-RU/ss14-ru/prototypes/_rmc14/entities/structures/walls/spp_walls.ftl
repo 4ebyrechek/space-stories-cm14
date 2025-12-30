@@ -1,5 +1,6 @@
 ent-RMCWallSPPReinforced = армированные стены
     .desc = Толстая и массивная металлическая стена. Поверхность бесплодная и внушительная.
+    .suffix = СПН
 ent-RMCWallSPPGreyReinforced = { ent-RMCWallSPPReinforced }
     .suffix = Серая
     .desc = { ent-RMCWallSPPReinforced.desc }

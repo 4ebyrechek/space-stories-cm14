@@ -1,0 +1,10 @@
+rmc-armor-not-intel-commsuit = Вы не сможете носить это, не надев униформу офицера морской разведки.
+rmc-armor-not-marine-commsuit = Вы не можете носить это без униформы КМП США.
+rmc-armor-not-un-security-commsuit = Вы не можете носить это, не надев униформу службы безопасности США.
+rmc-armor-not-mp-commsuit = Вы не сможете носить это без комбинезона военной полиции.
+rmc-armor-not-warden-commsuit = Вы не можете носить это, не надев униформу военного надзирателя.
+rmc-armor-not-cmp-commsuit = Вы не можете носить это, не надев униформу главного депутата.
+rmc-armor-not-pmc-commsuit = Вы не можете носить это без формы ЧВК.
+rmc-armor-not-spp-commsuit = Вы не можете носить это без одежды СПН.
+rmc-armor-not-cmb-commsuit = Вы не можете носить это без униформы БКМ.
+rmc-armor-not-tse-commsuit = Вы не сможете носить это без униформы ИТС.

@@ -1,9 +1,9 @@
 ent-RMCPlatformAlmayer = приподнятый металлический край
     .desc = Приподнятый уровень металла, часто используемый для поднятия одних зон над другими или для строительства мостов. Скорее всего, по нему можно забраться.
-    .suffix = Almayer
+    .suffix = Алмайер
 ent-RMCPlatformAlmayerCorner = приподнятый металлический угол
     .desc = Приподнятый уровень металла, часто используемый для поднятия одних зон над другими. Это угол.
-    .suffix = Almayer
+    .suffix = Алмайер
 ent-RMCPlatformAlmayerStairs = { ent-RMCPlatformAlmayer }
     .desc = { ent-RMCPlatformAlmayer.desc }
 ent-RMCPlatformAlmayerStairsAlt = { ent-RMCPlatformAlmayer }

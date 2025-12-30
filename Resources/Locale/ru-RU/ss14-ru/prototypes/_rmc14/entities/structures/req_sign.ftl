@@ -1,2 +1,2 @@
-ent-RMCSignRequisitionsCreed = LOC creed plaque
-    .desc = The short version of the Logistics Officer Creed made by the UN Logistics Officer Corps, this on is purely decorative and ceremonial version which is much shorter and doesn't include more modern edits.
+ent-RMCSignRequisitionsCreed = табличка с кредо офицера снабжения
+    .desc = Краткая версия Кредо Офицера Снабжения, созданная Корпусом Офицеров Снабжения США. Это чисто декоративная и церемониальная версия, которая намного короче и не включает в себя более современные правки.

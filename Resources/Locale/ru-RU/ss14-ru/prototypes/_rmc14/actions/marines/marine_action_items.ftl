@@ -28,3 +28,5 @@ ent-RMCActionToggleLaser = Включить лазер
     .desc = Включает или выключает лазер.
 ent-RMCActionAimedShot = Прицельный выстрел
     .desc = { ent-ActionMarineToggleable.desc }
+ent-RMCActionBroiler = Сменить баллон
+    .desc = Переключиться на другой топливный баллон.

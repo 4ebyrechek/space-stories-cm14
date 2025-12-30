@@ -1,6 +1,8 @@
 ent-RMCMapInsertSorokyneBase = { ent-RMCMapInsertBase }
-    .suffix = Insert Sorokyne
+    .suffix = Вставка Сорокин
     .desc = { ent-RMCMapInsertBase.desc }
-ent-RMCMapInsertSorokyneMedbay = CLF Camp
-    .suffix = Insert Sorokyne
+ent-RMCMapInsertSorokyneMedbay = Лагерь КОФ
+    .suffix = Вставка Сорокин
+    .desc = { ent-RMCMapInsertSorokyneBase.desc }
+ent-RMCMapInsertSorokyneFlamerBodypile = Куча тел (Огнемёт)
     .desc = { ent-RMCMapInsertSorokyneBase.desc }

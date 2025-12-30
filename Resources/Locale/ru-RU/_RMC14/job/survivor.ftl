@@ -14,6 +14,8 @@ rmc-job-greeting-survivor =
     Вы полностью осведомлены об угрозе ксенонидов и можете использовать эти знания по своему усмотрению.
     Вы НЕ знаете о морпехах и их намерениях.
     Вы [bold][color=#51A16C][font size=16]НЕ ИМЕЕТЕ ОТНОШЕНИЯ К КМП США![/font][/color][/bold]
+rmc-job-name-survivor-military = Военный выживший
+rmc-job-description-survivor-military = Вы выжили после заражения ксенонидами в колонии, принадлежащей к какой-то военной организации.
 cm-job-name-survivor-miner = Шахтер-колонист
 CMJobSurvivorMiner = Шахтер-колонист
 cm-job-name-surivor-priest = Священник-колонист
@@ -149,6 +151,10 @@ rmc-job-name-survivor-solaris-scientist = Solaris Scientist
 rmc-job-name-survivor-solaris-trucker = Solaris Heavy Vehicle Operator
 rmc-job-name-survivor-unmc-recruiter = UNMC Recruiter
 cm-job-name-survivor-trijent-engi-hydro = Инженер-гидроэнергетик
+rmc-job-name-survivor-shivas-liaison = Корпоративный специалист шивы по связям с общественностью
+rmc-job-name-survivor-shivas-doctor = Доктор Шивы
+rmc-job-name-survivor-shivas-researcher = Исследователь Шивы
+rmc-job-name-survivor-shivas-engineer = Инженер Шивы
 CMSurvivorTrijentEngiHydro = Инженер-гидроэнергетик
 cm-job-name-survivor-trijent-dam-tech = Техник по обслуживанию плотины
 CMSurvivorTrijentDamTech = Техник по обслуживанию плотины

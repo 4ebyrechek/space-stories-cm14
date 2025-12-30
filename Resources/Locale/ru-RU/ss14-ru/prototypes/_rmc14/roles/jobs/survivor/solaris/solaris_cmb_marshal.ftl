@@ -1,10 +1,8 @@
 ent-RMCMarshalCMBUniformSurvivorMarshal = { ent-RMCMarshalCMBUniform }
-    .suffix = Webbing
+    .suffix = Разгрузка
     .desc = { ent-RMCMarshalCMBUniform.desc }
 ent-RMCWebbingSurvivorCMBMarshal = { ent-CMWebbingHolster }
-    .suffix = Marshal, Survivor, Filled
+    .suffix = Маршал, Выживший, Заполнена
     .desc = { ent-CMWebbingHolster.desc }
-ent-RMCWeaponRevolverSpearheadTactitcal = { ent-RMCWeaponRevolverSpearhead }
-    .desc = { ent-RMCWeaponRevolverSpearhead.desc }
-ent-CMSpawnPointSolarisCMBMarshal = solaris cmb marshal spawn point
+ent-CMSpawnPointSolarisCMBMarshal = точка появления маршала КМБ (Солярис)
     .desc = { ent-CMSpawnPointJobBase.desc }

@@ -1,3 +1,5 @@
+ent-RMCVeteranUniformBase = { ent-RMCArmoredUniformBase }
+    .desc = { ent-RMCArmoredUniformBase.desc }
 ent-RMCJumpsuitVeteranPMCNoWebbing = Форменная одежда ЧВК
     .desc = Белый комплект обмундирования, предназначенный для частных охранников. На нём изображен символ корпорации «Вестон-Ямада».
 ent-RMCJumpsuitVeteran = { ent-JumpsuitMarine }
@@ -11,8 +13,8 @@ ent-RMCJumpsuitVeteranPMCGunner = { ent-RMCJumpsuitVeteranPMC }
 ent-RMCJumpsuitVeteranPMCSynth = { ent-RMCJumpsuitVeteranPMC }
     .suffix = Webbing, Synthetic
     .desc = { ent-RMCJumpsuitVeteranPMC.desc }
-ent-RMCJumpsuitVeteranPMCEngineer = PMC engineer fatigues
-    .desc = A black set of fatigues, designed for private security engineers. The symbol of the Weston-Yamada corporation is emblazed on the suit.
+ent-RMCJumpsuitVeteranPMCEngineer = форма инженера ЧВК
+    .desc = Чёрный комплект формы, разработанный для инженеров частной охраны. На костюме вышита эмблема корпорации «Вестон-Ямада».
 ent-RMCJumpsuitVeteranPMC = униформа ЧВК
     .desc = Белый комплект обмундирования для частных охранников. На нём изображен символ корпорации «Вестон-Ямада».
     .suffix = Разгрузка

@@ -1,10 +1,12 @@
-ent-RMCWeaponFL3Flamer = flammenwerfer 3 heavy incineration unit
-    .desc = A heavy industrial incineration unit produced by the Weston Corporation and later by Weston-Yamada. Often found among foliage cleaning missions on frontier colonies, it usually isn't seen in combat, but is devastating when actually used.
+ent-RMCWeaponFL3Flamer = тяжёлая установка-инсинератор Flammenwerfer 3
+    .desc = Тяжёлая промышленная установка-инсинератор, произведённая корпорацией Вестон, а позже — Вестон-Ямада. Часто встречается в миссиях по расчистке растительности в пограничных колониях. Обычно не используется в бою, но разрушительна при применении.
 ent-RMCWeaponFL3FlamerPVE = { ent-RMCWeaponFL3Flamer }
     .suffix = PVE
     .desc = { ent-RMCWeaponFL3Flamer.desc }
 ent-RMCWeaponFL3FlamerWhiteout = { ent-RMCWeaponFL3Flamer }
-    .suffix = Whiteout
+    .suffix = Вайт-аут
     .desc = { ent-RMCWeaponFL3Flamer.desc }
-ent-RMCTankFlamerFL3 = FW3 heavy incinerator tank
-    .desc = A heavy, high capacity tank utilized by the Flammenwerfer 3 Heavy Incineration Unit. This one has a blue, heat-resistant Weston-Yamada logo on it.
+ent-RMCTankFlamerFL3 = тяжёлый баллон FW3
+    .desc = Тяжёлый баллон большой ёмкости, используемый тяжёлой установкой-инсинератором Flammenwerfer 3. На нём нанесён синий термостойкий логотип Вестон-Ямада.
+ent-RMCTankFlamerFL3Whiteout = тяжёлый баллон FW3 (EX)
+    .desc = Тяжёлый топливный баллон со сверхгустым нафталиновым топливом типа EX — липкой горючей жидкостью, которая горит настолько жарко, что проплавляет большинство огнеупорных материалов. Используется тяжёлой установкой-инсинератором Flammenwerfer 3. На нём нанесён синий термостойкий логотип Вестон-Ямада. Обращайтесь с осторожностью.
