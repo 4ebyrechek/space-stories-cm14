@@ -1,5 +1,5 @@
 ent-RMCSpawnerRandomTools = случайный спавнер инструментов
-    .desc = { ent-MarkerBase.desc }
+    .desc = This is a random tool.
 ent-RMCSpawnerRandomToolbox = случайный спавнер ящика с инструментами
     .desc = Это случайный набор инструментов.
 ent-RMCSpawnerRandomPowercell = случайный спавнер батареек

@@ -124,8 +124,9 @@
         points: 40
       - id: RMCRocket84mm
         points: 40
-    # Stories-SHARP-Start
-    - name: Магазины SHARP
+      - id: RMCRocket84mmWhitePhosphorus
+        points: 40
+    - name: Магазины SHARP # Stories-SHARP
       entries:
       - id: STMagazineSharpRifleExplosive
         points: 40
@@ -133,9 +134,6 @@
         points: 40
       - id: STMagazineSharpRifleFlechette
         points: 40
-    # Stories-SHARP-End
-    #- id: 84mmWhitePhosphorusRocket
-    #  points: 40
     - name: Дополнительные Гранаты
       entries:
       - id: CMGrenadeHighExplosive

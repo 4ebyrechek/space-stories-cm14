@@ -1,4 +1,5 @@
-ent-RMCSpawnPointSurvivorKutjevoTrucker = kutjevo trucker spawn point
+ent-RMCSpawnPointSurvivorKutjevoTrucker = точка появления выжившего дальнобойщика (Кутьево)
     .desc = { ent-CMSpawnPointJobBase.desc }
-ent-RMCGearSurvivorPresetKutjevoTrucker = Kutjevo trucker colonist preset
+    .suffix = { ent-CMSpawnPointJobBase.suffix }
+ent-RMCGearSurvivorPresetKutjevoTrucker = пресет дальнобойщика-колониста (Кутьево)
     .desc = { ent-RMCSurvivorPresetTrucker.desc }

@@ -1,10 +1,10 @@
 ent-RMCPropBodybagPile = куча мешков для трупов
     .desc = Мрачная куча беспорядочно сложенных мешков для трупов.
 ent-RMCPropBodybagPileFlipped = { ent-RMCPropBodybagPile }
-    .suffix = Перевёрнутая
     .desc = { ent-RMCPropBodybagPile.desc }
+    .suffix = Перевёрнутая
 ent-RMCPropBodybagPileCharred = куча обгоревших мешков для трупов
     .desc = Мрачная куча беспорядочно сложенных мешков для трупов, их поверхность почернела и покрылась пузырями от сильного жара. Содержимое частично обгорело.
 ent-RMCPropBodybagPileCharredFlipped = { ent-RMCPropBodybagPileCharred }
-    .suffix = Перевёрнутая
     .desc = { ent-RMCPropBodybagPileCharred.desc }
+    .suffix = Перевёрнутая

@@ -1,8 +1,15 @@
 ent-RMCMapInsertSorokyneBase = { ent-RMCMapInsertBase }
-    .suffix = Вставка Сорокин
     .desc = { ent-RMCMapInsertBase.desc }
-ent-RMCMapInsertSorokyneMedbay = Лагерь КОФ
     .suffix = Вставка Сорокин
+ent-RMCMapInsertSorokyneSPPSOF = SPP SOF Dropship
     .desc = { ent-RMCMapInsertSorokyneBase.desc }
+    .suffix = { ent-RMCMapInsertSorokyneBase.suffix }
+ent-RMCMapInsertSorokyneSPPSOFAlt = SPP SOF Supply Ship
+    .desc = { ent-RMCMapInsertSorokyneBase.desc }
+    .suffix = { ent-RMCMapInsertSorokyneBase.suffix }
+ent-RMCMapInsertSorokyneMedbay = Лагерь КОФ
+    .desc = { ent-RMCMapInsertSorokyneBase.desc }
+    .suffix = { ent-RMCMapInsertSorokyneBase.suffix }
 ent-RMCMapInsertSorokyneFlamerBodypile = Куча тел (Огнемёт)
     .desc = { ent-RMCMapInsertSorokyneBase.desc }
+    .suffix = { ent-RMCMapInsertSorokyneBase.suffix }

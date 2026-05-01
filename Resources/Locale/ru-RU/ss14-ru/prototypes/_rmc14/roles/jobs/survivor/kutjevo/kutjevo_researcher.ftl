@@ -1,4 +1,5 @@
-ent-RMCSpawnPointSurvivorKutjevoResearcher = survivor kutjevo researcher spawn point
+ent-RMCSpawnPointSurvivorKutjevoResearcher = точка появления выжившего исследователя (Кутьево)
     .desc = { ent-CMSpawnPointJobBase.desc }
-ent-RMCSurvivorPresetKutjevoResearcher = kutjevo researcher colonist preset
+    .suffix = { ent-CMSpawnPointJobBase.suffix }
+ent-RMCSurvivorPresetKutjevoResearcher = пресет исследователя-колониста (Кутьево)
     .desc = { ent-RMCSurvivorPresetScientist.desc }

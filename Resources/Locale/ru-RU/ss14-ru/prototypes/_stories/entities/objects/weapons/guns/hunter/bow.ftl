@@ -7,5 +7,5 @@ ent-STArrowHunterExplosive = взрывная стрела
 ent-STQuiverHunter = ремень с колчаном
     .desc = Ремень, на котором можно носить лук вместе с колчаном для стрел.
 ent-STQuiverHunterFilled = { ent-STQuiverHunter }
-    .suffix = Наполненный
     .desc = { ent-STQuiverHunter.desc }
+    .suffix = Наполненный

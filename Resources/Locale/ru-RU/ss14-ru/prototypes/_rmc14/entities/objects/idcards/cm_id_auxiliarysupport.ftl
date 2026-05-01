@@ -7,4 +7,4 @@ ent-CMIDCardPilotGunship = ID-карта пилота штурмовика
 ent-CMIDCardDCC = ID-карта командира экипажа дропшипа
     .desc = { ent-CMIDCardBase.desc }
 ent-CMIDCardIntelOfficer = ID-карта офицера разведки
-    .desc = { ent-CMIDCardBase.desc }
+    .desc = { ent-CMIDCardSilver.desc }

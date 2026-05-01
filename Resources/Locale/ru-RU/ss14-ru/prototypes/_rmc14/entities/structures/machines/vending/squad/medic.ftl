@@ -14,3 +14,6 @@ ent-RMCSPPMedicalEquipmentPVE = H-Tech squad medical equipment rack
 ent-ColMarTechMedicalChemicalPVE = ColMarTech squad medical chemical rack
     .desc = An automated gear rack for specialized chemicals for the hospital corpsman.
     .suffix = PVE
+ent-RMCRCMMedicalChemicalPVE = We-Ya section medical chemical rack
+    .desc = An automated gear rack for specialized chemicals for the medical assistants.
+    .suffix = PVE, RCM

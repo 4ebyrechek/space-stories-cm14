@@ -1,33 +1,47 @@
-rmc-job-greeting-chances-colonist =
-    You are a colonist living on LV-522. You are tasked by your employer, the Weston-Yamada Corporation, to preform your expected duties.
-    
-    You are [bold][color=#51A16C][font size=16]NON-HOSTILE to the UNMC![/font][/color][/bold]
-rmc-job-name-colonist-chances-trucker = Weston-Yamada Heavy Vehicle Operator
-rmc-job-description-colonist-chances-trucker = Operate heavy equipment in and around the colony.
-CMSurvivorChancesTrucker = Weston-Yamada Heavy Vehicle Operator
-rmc-job-name-colonist-chances-miner = Mining Surveyor
-CMSurvivorChancesMiner = Mining Surveyor
-rmc-job-name-colonist-chances-civilian = Catering Technician
-CMSurvivorChancesCivilian = Catering Technician
-rmc-job-name-colonist-administrative-clerk = Administrative Clerk
-CMSurvivorAdministrativeClerk = Administrative Clerk
-rmc-job-name-colonist-operations-supervisor = Operations Supervisor
-CMSurvivorOperationsSupervisor = Operations Supervisor
-rmc-job-name-colonist-chances-medic = Chance's Claim Medic
-CMSurvivorChancesMedic = Chance's Claim Medic
-rmc-job-name-colonist-chances-paramedic = Chance's Claim Paramedic
-CMSurvivorChancesParamedic = Chance's Claim Paramedic
-rmc-job-name-colonist-environmental-researcher = Environmental Researcher
-CMSurvivorChancesEnvironmentalResearcher = Environmental Researcher
-rmc-job-name-colonist-terraforming-specialist = Terraforming Specialist
-CMSurvivorChancesTerraformingSpecialist = Terraforming Specialist
-rmc-job-name-colonist-atmos-process-tech = Atmospheric Processing Reactor Technician
-CMSurvivorChancesAtmosProcessTech = Atmospheric Processing Reactor Technician
-rmc-job-name-colonist-vehicle-repairman = Vehicle Repairman
-CMSurvivorChancesVehicleRepairman = Vehicle Repairman
-rmc-job-name-colonist-colony-maint-tech = Colony Maintenance Technician
-CMSurvivorChancesColonyMaintTech = Colony Maintenance Technician
-rmc-job-name-colonist-cargo-tech = Warehouse Worker
-CMSurvivorChancesCargoTech = Warehouse Worker
-rmc-job-name-colonist-chances-goon = Chance's Claim Corporate Security
-CMSurvivorChancesGoon = Chance's Claim Corporate Security
+rmc-job-greeting-chances-colonist = Вы — колонист, живущий на LV-522. Ваш работодатель, корпорация "Вестон-Ямада", поручил вам выполнение ваших прямых обязанностей.
+
+  Вы [bold][color=#51A16C][font size=16]НЕ ВРАЖДЕБНЫ к КМП США![/font][/color][/bold]
+
+rmc-job-name-colonist-chances-trucker = Оператор тяжелой техники "Вестон-Ямада"
+rmc-job-description-colonist-chances-trucker = Управляйте тяжелым оборудованием в колонии и за её пределами.
+CMSurvivorChancesTrucker = Оператор тяжелой техники "Вестон-Ямада"
+
+rmc-job-name-colonist-chances-miner = Маркшейдер
+CMSurvivorChancesMiner = Маркшейдер
+
+rmc-job-name-colonist-chances-civilian = Специалист по питанию
+CMSurvivorChancesCivilian = Специалист по питанию
+
+rmc-job-name-colonist-administrative-clerk = Административный клерк
+CMSurvivorAdministrativeClerk = Административный клерк
+
+rmc-job-name-colonist-operations-supervisor = Операционный супервайзер
+CMSurvivorOperationsSupervisor = Операционный супервайзер
+
+rmc-job-name-colonist-chances-medic = Медик "Притензии Шанса"
+CMSurvivorChancesMedic = Медик "Притензии Шанса"
+
+rmc-job-name-colonist-chances-paramedic = Парамедик "Притензии Шанса"
+CMSurvivorChancesParamedic = Парамедик "Притензии Шанса"
+
+rmc-job-name-colonist-environmental-researcher = Исследователь окружающей среды
+CMSurvivorChancesEnvironmentalResearcher= Исследователь окружающей среды
+
+rmc-job-name-colonist-terraforming-specialist = Специалист по терраформированию
+CMSurvivorChancesTerraformingSpecialist = Специалист по терраформированию
+
+rmc-job-name-colonist-atmos-process-tech = Техник реактора атмосферной обработки
+CMSurvivorChancesAtmosProcessTech = Техник реактора атмосферной обработки
+
+rmc-job-name-colonist-vehicle-repairman = Механик по ремонту техники
+CMSurvivorChancesVehicleRepairman = Механик по ремонту техники
+
+rmc-job-name-colonist-colony-maint-tech = Техник по обслуживанию колонии
+CMSurvivorChancesColonyMaintTech = Техник по обслуживанию колонии
+
+rmc-job-name-colonist-cargo-tech = Складской рабочий
+CMSurvivorChancesCargoTech = Складской рабочий
+
+rmc-job-name-colonist-chances-goon = Корпоративная безопасность "Притензии Шанса"
+CMSurvivorChancesGoon = Корпоративная безопасность "Притензии Шанса"
+

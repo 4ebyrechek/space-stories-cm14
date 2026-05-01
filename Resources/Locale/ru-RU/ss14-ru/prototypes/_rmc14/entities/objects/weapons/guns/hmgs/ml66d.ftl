@@ -1,11 +1,11 @@
 ent-RMCSmartGunMounted = станковый пулемет M56D
     .desc = Верхняя половина стойки для крупнокалиберного пулемета M56D. Однако без треноги от нее мало пользы.
 ent-RMCSmartGunMountedLoaded = { ent-RMCSmartGunMounted }
+    .desc = { ent-RMCSmartGunMounted.desc }
     .suffix = Loaded
-    .desc = { ent-RMCSmartGunMounted.desc }
 ent-RMCSmartGunMountedStatic = станковый пулемет M56D
-    .suffix = Scoped
     .desc = { ent-RMCSmartGunMounted.desc }
+    .suffix = Scoped
 ent-RMCMagazineML66D = короб для патронов M56D (10x28мм)
     .desc = Короб из 700 безгильзовых вольфрамовых патронов калибра 10x28 мм для крупнокалиберного пулемета M56D.
 ent-RMCMagazineML66DLarge = огромный короб для патронов M56D (10x28мм)

@@ -4,7 +4,8 @@ ent-RMCIDCardPMCGoonCorpse = { ent-RMCIDCardPMC }
     .desc = { ent-RMCIDCardPMC.desc }
 ent-RMCIDCardPMCGoonLeadCorpse = { ent-RMCIDCardPMC }
     .desc = { ent-RMCIDCardPMC.desc }
-
+ent-RMCIDCardFORECONSpotter = ID-карта корректиро́вщика ФОРКОН
+    .desc = { ent-CMIDCardStandardDogtag.desc }
 ent-RMCIDCardPrisonerCorpse = { ent-CMIDCardLanyard }
     .desc = { ent-CMIDCardLanyard.desc }
 ent-RMCIDCardChefCorpse = { ent-CMIDCardLanyard }

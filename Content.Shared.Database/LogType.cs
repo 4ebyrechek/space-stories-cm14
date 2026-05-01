@@ -524,6 +524,7 @@ public enum LogType
     RMCTelephone = RMCMarineAnnounce + 42,
     RMCIconLabel = RMCMarineAnnounce + 43,
     RMCMedalRecommendation = RMCMarineAnnounce + 44,
+    RMCAutodocSurgeryAbort = RMCMarineAnnounce + 45,
 
     // Stories-LogType
     STHunter = 20000,

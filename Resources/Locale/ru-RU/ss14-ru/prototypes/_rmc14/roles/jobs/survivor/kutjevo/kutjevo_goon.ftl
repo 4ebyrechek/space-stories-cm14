@@ -1,4 +1,5 @@
-ent-RMCSpawnPointSurvivorKutjevoGoon = kutjevo goon spawn point
+ent-RMCSpawnPointSurvivorKutjevoGoon = точка появления выжившего охранника (Кутьево)
     .desc = { ent-CMSpawnPointJobBase.desc }
-ent-RMCGearSurvivorPresetKutjevoGoon = kutjevo goon colonist preset
+    .suffix = { ent-CMSpawnPointJobBase.suffix }
+ent-RMCGearSurvivorPresetKutjevoGoon = пресет охранника-колониста (Кутьево)
     .desc = { ent-RMCSurvivorPresetSecurity.desc }

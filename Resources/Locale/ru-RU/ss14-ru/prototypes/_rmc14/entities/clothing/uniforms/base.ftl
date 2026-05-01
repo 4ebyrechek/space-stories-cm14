@@ -1,5 +1,5 @@
-ent-RMCUniformBase = { ent-ClothingUniformBase }
-    .desc = { ent-ClothingUniformBase.desc }
+ent-RMCUniformBase = { ent-Clothing }
+    .desc = { ent-Clothing.desc }
 ent-RMCFoldableUniformBase = { ent-RMCUniformBase }
     .desc = { ent-RMCUniformBase.desc }
 ent-RMCAlternateFoldableUniformBase = { ent-RMCUniformBase }
@@ -8,5 +8,5 @@ ent-RMCUniformSuitCoordsBase = { ent-RMCUniformBase }
     .desc = { ent-RMCUniformBase.desc }
 ent-RMCArmoredUniformBase = { ent-RMCUniformBase }
     .desc = { ent-RMCUniformBase.desc }
-ent-RMCMarineUniformBase = { ent-RMCUniformBase }
-    .desc = { ent-RMCUniformBase.desc }
+ent-RMCMarineUniformBase = { ent-RMCArmoredUniformBase }
+    .desc = { ent-RMCArmoredUniformBase.desc }

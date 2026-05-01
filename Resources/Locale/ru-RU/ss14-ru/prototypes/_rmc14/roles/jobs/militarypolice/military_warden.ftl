@@ -1,4 +1,5 @@
 ent-CMSpawnPointMilitaryWarden = точка появления смотрителя военной полиции
     .desc = { ent-CMSpawnPointJobBase.desc }
-ent-RMCGuidebookRoleMW = Military Warden
-    .desc = Military Warden
+    .suffix = { ent-CMSpawnPointJobBase.suffix }
+ent-RMCGuidebookRoleMW = Смотритель Военной Полиции
+    .desc = Смотритель Военной Полиции

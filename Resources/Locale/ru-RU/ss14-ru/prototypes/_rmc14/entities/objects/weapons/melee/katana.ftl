@@ -3,6 +3,7 @@ ent-RMCKatana = катана
     .suffix = RMC14
 ent-RMCKatanaDull = replica katana
     .desc = A cheap knock-off commonly found in regular knife stores. Can still do some damage.
+    .suffix = { ent-RMCKatana.suffix }
 ent-RMCKatanaSharp = абсурдно острая катана
     .desc =
         Всё, с меня хватит этого дерьма с "шедевральными полуторными мечами", которое сейчас происходит в RMC-14. Катаны заслуживают гораздо большего. Гораздо, гораздо большего.

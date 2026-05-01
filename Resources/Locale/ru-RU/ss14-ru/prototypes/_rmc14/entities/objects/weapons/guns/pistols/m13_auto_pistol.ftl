@@ -1,6 +1,17 @@
+ent-RMCWeaponPistolM13 = автоматический пистолет M13
+    .desc = Автоматический пистолет M13 — компактное, скорострельное вспомогательное оружие, разработанное для обороны в ближнем бою. С магазином на 40 патронов, он делает упор на скорострельность, а не на точность, обеспечивая эффективный подавляющий огонь на коротких дистанциях.
+ent-RMCWeaponPistolM13Empty = { ent-RMCWeaponPistolM13 }
+    .desc = { ent-RMCWeaponPistolM13.desc }
+    .suffix = Пустой
+ent-RMCMagazinePistolM13 = магазин M13 HV (10x20 мм)
+    .desc = { ent-CMBaseMagazinePistol.desc }
 ent-RMCMagazinePistolM13AP = магазин M13 ББ (10x20мм БПК)
     .desc = { ent-RMCMagazinePistolM13.desc }
+ent-RMCMagazinePistolM13Ext = увеличенный магазин M13 HV (10x20 мм)
+    .desc = { ent-CMBaseMagazinePistol.desc }
 ent-RMCMagazinePistolM13ExtAP = удлинённый магазин M13 ББ (10x20мм БПК)
+    .desc = { ent-CMBaseMagazinePistol.desc }
+ent-RMCMagazinePistolM13Drum = барабанный магазин M13 HV (10x20 мм)
     .desc = { ent-CMBaseMagazinePistol.desc }
 ent-RMCMagazinePistolM13DrumAP = барабанный магазин M13 ББ (10x20мм БПК)
     .desc = { ent-CMBaseMagazinePistol.desc }
